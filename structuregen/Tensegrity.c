@@ -9,9 +9,9 @@
 #define SUPPORTSY 1.1
 #define SUPPORTSX 1.0
 #define SWEEPSQUASH  .88
-#define TIGHTEN .1 //For offsetting sockets to make them tighter.
+#define TIGHTEN -.1 //For offsetting sockets to make them tighter.
 
-float rs[] = { 54, 78, 82, 104 };
+float rs[] = { 58, 82, 86, 110 };
 
 //CNLohr's Super Basic SVG Toolkit.
 int inpath = 0;
@@ -40,19 +40,20 @@ int main()
 {
 	float width = 100;
 	float height = 100;
-	float centerx = width/2-15;
-	float centery = height/2-2.5;
+	float centerx = width/2-13;
+	float centery = height/2;
 	StartSVG( width, height );
 	
 	int i, k;
 
 	float circleposes[6];
 	
+	float rotates[2] = { -38, 94.5 };
 	//The two arms
 	for(k = 0; k < 2; k++ )
 	{
-		float keyposx = (k?9:22) + centerx;
-		float keyposy = (k?-87:0) + centery;
+		float keyposx = (k?4.5:-18.5) + centerx;
+		float keyposy = (k?-96.8:36) + centery;
 		float ofs = k?-1.5707:0;
 		//First make the toothed part.
 		float am0 = rs[k*2+0]/2.0;
@@ -62,7 +63,7 @@ int main()
 		float ha = keyposy - MATERIAL_THICKNESS/2.0;
 		float hb = keyposy + MATERIAL_THICKNESS/2.0;
 
-		if( k ) printf( "<g transform=\"rotate(90)\">\n" );
+		printf( "<g transform=\"rotate(%f)\">\n", rotates[k] );
 		PathStart( CUT );
 		PathM( lerp( am, bm, 0.0 ), ha );
 		PathL( lerp( am, bm, 0.2 ), ha );
@@ -104,12 +105,14 @@ int main()
 			}
 		}
 		PathClose();
-		if( k ) printf( "</g>\n" );
+		printf( "</g>\n" );
 	}
 	
+	printf( "<g transform=\"rotate(%f)\">\n", rotates[0] );
 	Circle( CUT, circleposes[0], circleposes[1], 2 );
 	Circle( CUT, circleposes[2], circleposes[3], 2 );
-	printf( "<g transform=\"rotate(90)\">\n" );
+	printf( "</g>\n" );
+	printf( "<g transform=\"rotate(%f)\">\n", rotates[1] );
 	Circle( CUT, circleposes[4], circleposes[5], 2 );
 	printf( "</g>\n" );
 
