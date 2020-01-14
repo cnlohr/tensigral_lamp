@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <export version="D">
   <design>
-    <source>C:\Projects\tensigral_lamp\tensigral_lamp_hardware\tensigral_lamp_hardware.sch</source>
-    <date>12/24/2019 6:48:59 PM</date>
-    <tool>Eeschema (5.1.4)-1</tool>
+    <source>/home/cnlohr/git/tensigral_lamp/tensigral_lamp_hardware/tensigral_lamp_hardware.sch</source>
+    <date>Mon 13 Jan 2020 10:43:10 PM EST</date>
+    <tool>Eeschema 5.1.5-52549c5~84~ubuntu18.04.1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
         <title/>
@@ -25,7 +25,7 @@
       <fields>
         <field name="NOBOM">1</field>
       </fields>
-      <libsource lib="5050RGB" part="CONN_1" description=""/>
+      <libsource lib="tensigral_lamp_hardware-rescue" part="CONN_1-5050RGB" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E021E8D</tstamp>
     </comp>
@@ -35,7 +35,7 @@
       <fields>
         <field name="NOBOM">1</field>
       </fields>
-      <libsource lib="5050RGB" part="CONN_1" description=""/>
+      <libsource lib="tensigral_lamp_hardware-rescue" part="CONN_1-5050RGB" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E021E87</tstamp>
     </comp>
@@ -45,7 +45,7 @@
       <fields>
         <field name="NOBOM">1</field>
       </fields>
-      <libsource lib="5050RGB" part="CONN_1" description=""/>
+      <libsource lib="tensigral_lamp_hardware-rescue" part="CONN_1-5050RGB" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E01EF54</tstamp>
     </comp>
@@ -55,7 +55,7 @@
       <fields>
         <field name="NOBOM">1</field>
       </fields>
-      <libsource lib="5050RGB" part="CONN_1" description=""/>
+      <libsource lib="tensigral_lamp_hardware-rescue" part="CONN_1-5050RGB" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E01EF4A</tstamp>
     </comp>
@@ -65,7 +65,7 @@
       <fields>
         <field name="NOBOM">1</field>
       </fields>
-      <libsource lib="5050RGB" part="CONN_1" description=""/>
+      <libsource lib="tensigral_lamp_hardware-rescue" part="CONN_1-5050RGB" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E01D4B1</tstamp>
     </comp>
@@ -77,7 +77,7 @@
         <field name="Cost100">.037085</field>
         <field name="LCSC">https://lcsc.com/product-detail/USB-Connectors_XKB-Enterprise-U253-051T-4BH89-F1B_C319172.html</field>
       </fields>
-      <libsource lib="Connector" part="USB_B_Micro" description="USB Micro Type B connector"/>
+      <libsource lib="tensigral_lamp_hardware-rescue" part="USB_B_Micro-Connector" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E150F26</tstamp>
     </comp>
@@ -89,7 +89,7 @@
         <field name="Cost100">0.822727</field>
         <field name="LCSC">https://lcsc.com/product-detail/ST-Microelectronics_STMicroelectronics_STM32F042F6P6_STM32F042F6P6_C81000.html</field>
       </fields>
-      <libsource lib="MCU_ST_STM32F0" part="STM32F042F4Px" description="ARM Cortex-M0 MCU, 16KB flash, 6KB RAM, 48MHz, 2-3.6V, 16 GPIO, TSSOP-20"/>
+      <libsource lib="tensigral_lamp_hardware-rescue" part="STM32F042F4Px-MCU_ST_STM32F0" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E172553</tstamp>
     </comp>
@@ -101,7 +101,7 @@
         <field name="Cost100">.112</field>
         <field name="LCSC">https://www.aliexpress.com/item/32814778563.html</field>
       </fields>
-      <libsource lib="LED" part="WS2812B" description="RGB LED with integrated controller"/>
+      <libsource lib="tensigral_lamp_hardware-rescue" part="WS2812B-LED" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E0279C7</tstamp>
     </comp>
@@ -111,7 +111,7 @@
       <fields>
         <field name="NOBOM">1</field>
       </fields>
-      <libsource lib="5050RGB" part="CONN_1" description=""/>
+      <libsource lib="tensigral_lamp_hardware-rescue" part="CONN_1-5050RGB" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E01C21A</tstamp>
     </comp>
@@ -122,7 +122,7 @@
         <field name="Cost100">.053488</field>
         <field name="LCSC">https://lcsc.com/product-detail/DC-DC-Converters_MT2492_C89358.html</field>
       </fields>
-      <libsource lib="MT2492" part="MT2492" description=""/>
+      <libsource lib="tensigral_lamp_hardware-rescue" part="MT2492-MT2492" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E02B8D7</tstamp>
     </comp>
@@ -134,7 +134,7 @@
         <field name="Cost100">0.032871</field>
         <field name="LCSC">https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_FH-Guangdong-Fenghua-Advanced-Tech-0805F226M160NT_C116973.html</field>
       </fields>
-      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <libsource lib="tensigral_lamp_hardware-rescue" part="C-Device" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E043CC9</tstamp>
     </comp>
@@ -146,7 +146,7 @@
         <field name="Cost100">0.032871</field>
         <field name="LCSC">https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_FH-Guangdong-Fenghua-Advanced-Tech-0805F226M160NT_C116973.html</field>
       </fields>
-      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <libsource lib="tensigral_lamp_hardware-rescue" part="C-Device" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E07E153</tstamp>
     </comp>
@@ -158,7 +158,7 @@
         <field name="Cost100">0.028295</field>
         <field name="LCSC">https://lcsc.com/product-detail/Power-Inductors_Cybermax_CMLF0504-100KTT_Cybermax-CMLF0504-100KTT_C405146.html</field>
       </fields>
-      <libsource lib="Device" part="L" description="Inductor"/>
+      <libsource lib="tensigral_lamp_hardware-rescue" part="L-Device" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E08A6A5</tstamp>
     </comp>
@@ -170,7 +170,7 @@
         <field name="Cost100">0.003738</field>
         <field name="LCSC">https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_Walsin-Tech-Corp-0805B223K500_C123617.html</field>
       </fields>
-      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <libsource lib="tensigral_lamp_hardware-rescue" part="C-Device" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E08F68D</tstamp>
     </comp>
@@ -182,7 +182,7 @@
         <field name="Cost100">.00104</field>
         <field name="LCSC">https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_UNI-ROYAL-Uniroyal-Elec-0805W8F6801T5E_C17772.html</field>
       </fields>
-      <libsource lib="Device" part="R" description="Resistor"/>
+      <libsource lib="tensigral_lamp_hardware-rescue" part="R-Device" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E0965D7</tstamp>
     </comp>
@@ -194,7 +194,7 @@
         <field name="Cost100">0.001004</field>
         <field name="LCSC">https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_FH-Guangdong-Fenghua-Advanced-Tech-RS-05K3302FT_C139883.html</field>
       </fields>
-      <libsource lib="Device" part="R" description="Resistor"/>
+      <libsource lib="tensigral_lamp_hardware-rescue" part="R-Device" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E0A6998</tstamp>
     </comp>
@@ -204,7 +204,7 @@
       <fields>
         <field name="NOBOM">1</field>
       </fields>
-      <libsource lib="5050RGB" part="CONN_1" description=""/>
+      <libsource lib="tensigral_lamp_hardware-rescue" part="CONN_1-5050RGB" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E0C2521</tstamp>
     </comp>
@@ -214,7 +214,7 @@
       <fields>
         <field name="NOBOM">1</field>
       </fields>
-      <libsource lib="5050RGB" part="CONN_1" description=""/>
+      <libsource lib="tensigral_lamp_hardware-rescue" part="CONN_1-5050RGB" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E0D2568</tstamp>
     </comp>
@@ -224,7 +224,7 @@
       <fields>
         <field name="NOBOM">1</field>
       </fields>
-      <libsource lib="5050RGB" part="CONN_1" description=""/>
+      <libsource lib="tensigral_lamp_hardware-rescue" part="CONN_1-5050RGB" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E0D313A</tstamp>
     </comp>
@@ -236,7 +236,7 @@
         <field name="Cost100">0.003738</field>
         <field name="LCSC">https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_Walsin-Tech-Corp-0805B223K500_C123617.html</field>
       </fields>
-      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <libsource lib="tensigral_lamp_hardware-rescue" part="C-Device" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E0D8B71</tstamp>
     </comp>
@@ -248,7 +248,7 @@
         <field name="Cost100">.00104</field>
         <field name="LCSC">https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_UNI-ROYAL-Uniroyal-Elec-0805W8F6801T5E_C17772.html</field>
       </fields>
-      <libsource lib="Device" part="R" description="Resistor"/>
+      <libsource lib="tensigral_lamp_hardware-rescue" part="R-Device" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E110972</tstamp>
     </comp>
@@ -256,10 +256,10 @@
       <value>TACTILE</value>
       <footprint>kicad:TACTILE10B</footprint>
       <fields>
-        <field name="Cost100">0.007906</field>
-        <field name="LCSC">https://lcsc.com/product-detail/Tactile-Switches_BOOMELE-Boom-Precision-Elec-C174049_C174049.html</field>
+        <field name="Cost100">0.01388</field>
+        <field name="LCSC">https://lcsc.com/product-detail/Tactile-Switches_SHOU-HAN-TS665TP_C412375.html</field>
       </fields>
-      <libsource lib="tactile" part="TACTILE" description=""/>
+      <libsource lib="tensigral_lamp_hardware-rescue" part="TACTILE-tactile" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E120FD9</tstamp>
     </comp>
@@ -271,7 +271,7 @@
         <field name="Cost100">0.024623</field>
         <field name="LCSC">https://lcsc.com/product-detail/Pin-Header-Female-Header_Ckmtw-Shenzhen-Cankemeng-C124390_C124390.html</field>
       </fields>
-      <libsource lib="Connector_Generic" part="Conn_02x03_Odd_Even" description="Generic connector, double row, 02x03, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <libsource lib="tensigral_lamp_hardware-rescue" part="Conn_02x03_Odd_Even-Connector_Generic" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E13D9F2</tstamp>
     </comp>
@@ -282,7 +282,7 @@
       <fields>
         <field name="NOBOM">1</field>
       </fields>
-      <libsource lib="5050RGB" part="CONN_1" description=""/>
+      <libsource lib="tensigral_lamp_hardware-rescue" part="CONN_1-5050RGB" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E237F5E</tstamp>
     </comp>
@@ -293,7 +293,7 @@
       <fields>
         <field name="NOBOM">1</field>
       </fields>
-      <libsource lib="Connector_Generic" part="Conn_01x03" description="Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <libsource lib="tensigral_lamp_hardware-rescue" part="Conn_01x03-Connector_Generic" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E249701</tstamp>
     </comp>
@@ -303,7 +303,7 @@
       <fields>
         <field name="NOBOM">1</field>
       </fields>
-      <libsource lib="5050RGB" part="CONN_1" description=""/>
+      <libsource lib="tensigral_lamp_hardware-rescue" part="CONN_1-5050RGB" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E261D17</tstamp>
     </comp>
@@ -313,7 +313,7 @@
       <fields>
         <field name="NOBOM">1</field>
       </fields>
-      <libsource lib="5050RGB" part="CONN_1" description=""/>
+      <libsource lib="tensigral_lamp_hardware-rescue" part="CONN_1-5050RGB" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E387AEF</tstamp>
     </comp>
@@ -323,7 +323,7 @@
       <fields>
         <field name="NOBOM">1</field>
       </fields>
-      <libsource lib="5050RGB" part="CONN_1" description=""/>
+      <libsource lib="tensigral_lamp_hardware-rescue" part="CONN_1-5050RGB" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E3CE23F</tstamp>
     </comp>
@@ -334,7 +334,7 @@
         <field name="Cost100">.042632</field>
         <field name="LCSC">https://lcsc.com/product-detail/Pin-Header-Female-Header_Ckmtw-Shenzhen-Cankemeng-C124390_C124390.html</field>
       </fields>
-      <libsource lib="5050RGB" part="AVRISP6" description=""/>
+      <libsource lib="tensigral_lamp_hardware-rescue" part="AVRISP6-5050RGB" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E3D4579</tstamp>
     </comp>
@@ -346,7 +346,7 @@
         <field name="Cost100">0.032871</field>
         <field name="LCSC">https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_FH-Guangdong-Fenghua-Advanced-Tech-0805F226M160NT_C116973.html</field>
       </fields>
-      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <libsource lib="tensigral_lamp_hardware-rescue" part="C-Device" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E3E7089</tstamp>
     </comp>
@@ -358,7 +358,7 @@
         <field name="Cost100">.00104</field>
         <field name="LCSC">https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_UNI-ROYAL-Uniroyal-Elec-0805W8F6801T5E_C17772.html</field>
       </fields>
-      <libsource lib="Device" part="R" description="Resistor"/>
+      <libsource lib="tensigral_lamp_hardware-rescue" part="R-Device" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E431524</tstamp>
     </comp>
@@ -370,7 +370,7 @@
         <field name="Cost100">.00104</field>
         <field name="LCSC">https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_UNI-ROYAL-Uniroyal-Elec-0805W8F6801T5E_C17772.html</field>
       </fields>
-      <libsource lib="Device" part="R" description="Resistor"/>
+      <libsource lib="tensigral_lamp_hardware-rescue" part="R-Device" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E434511</tstamp>
     </comp>
@@ -382,7 +382,7 @@
         <field name="Cost100">.00104</field>
         <field name="LCSC">https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_UNI-ROYAL-Uniroyal-Elec-0805W8F6801T5E_C17772.html</field>
       </fields>
-      <libsource lib="Device" part="R" description="Resistor"/>
+      <libsource lib="tensigral_lamp_hardware-rescue" part="R-Device" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E453FC4</tstamp>
     </comp>
@@ -394,7 +394,7 @@
         <field name="Cost100">0.075806</field>
         <field name="LCSC">https://lcsc.com/product-detail/Electret-Condenser-Microphone_INGHAi-GMI9767-56db_C234006.html</field>
       </fields>
-      <libsource lib="Device" part="Microphone" description="Microphone"/>
+      <libsource lib="tensigral_lamp_hardware-rescue" part="Microphone-Device" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E47A281</tstamp>
     </comp>
@@ -405,7 +405,7 @@
         <field name="Cost100">0.184848</field>
         <field name="LCSC">https://lcsc.com/product-detail/Motion-Sensors-Accelerometers_MEMSIC-MXC4005XC_C404327.html</field>
       </fields>
-      <libsource lib="kicad" part="MXC400xXC" description=""/>
+      <libsource lib="tensigral_lamp_hardware-rescue" part="MXC400xXC-kicad" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E504F64</tstamp>
     </comp>
@@ -417,7 +417,7 @@
         <field name="Cost100">0.003738</field>
         <field name="LCSC">https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_Walsin-Tech-Corp-0805B223K500_C123617.html</field>
       </fields>
-      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <libsource lib="tensigral_lamp_hardware-rescue" part="C-Device" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E508E3A</tstamp>
     </comp>
@@ -429,7 +429,7 @@
         <field name="Cost100">0.003738</field>
         <field name="LCSC">https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_Walsin-Tech-Corp-0805B223K500_C123617.html</field>
       </fields>
-      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <libsource lib="tensigral_lamp_hardware-rescue" part="C-Device" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E5134BF</tstamp>
     </comp>
@@ -441,7 +441,7 @@
         <field name="Cost100">0.003738</field>
         <field name="LCSC">https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_Walsin-Tech-Corp-0805B223K500_C123617.html</field>
       </fields>
-      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <libsource lib="tensigral_lamp_hardware-rescue" part="C-Device" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E532D66</tstamp>
     </comp>
@@ -453,7 +453,7 @@
         <field name="Cost100">0.003738</field>
         <field name="LCSC">https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_Walsin-Tech-Corp-0805B223K500_C123617.html</field>
       </fields>
-      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <libsource lib="tensigral_lamp_hardware-rescue" part="C-Device" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E5336DD</tstamp>
     </comp>
@@ -465,7 +465,7 @@
         <field name="Cost100">0.003738</field>
         <field name="LCSC">https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_Walsin-Tech-Corp-0805B223K500_C123617.html</field>
       </fields>
-      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <libsource lib="tensigral_lamp_hardware-rescue" part="C-Device" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E533FE9</tstamp>
     </comp>
@@ -477,7 +477,7 @@
         <field name="Cost100">0.003738</field>
         <field name="LCSC">https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_Walsin-Tech-Corp-0805B223K500_C123617.html</field>
       </fields>
-      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <libsource lib="tensigral_lamp_hardware-rescue" part="C-Device" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E534B3A</tstamp>
     </comp>
@@ -489,7 +489,7 @@
         <field name="Cost100">0.003738</field>
         <field name="LCSC">https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_Walsin-Tech-Corp-0805B223K500_C123617.html</field>
       </fields>
-      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <libsource lib="tensigral_lamp_hardware-rescue" part="C-Device" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E53552C</tstamp>
     </comp>
@@ -501,7 +501,7 @@
         <field name="Cost100">0.003738</field>
         <field name="LCSC">https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_Walsin-Tech-Corp-0805B223K500_C123617.html</field>
       </fields>
-      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <libsource lib="tensigral_lamp_hardware-rescue" part="C-Device" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E535EBA</tstamp>
     </comp>
@@ -513,7 +513,7 @@
         <field name="Cost100">0.003738</field>
         <field name="LCSC">https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_Walsin-Tech-Corp-0805B223K500_C123617.html</field>
       </fields>
-      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <libsource lib="tensigral_lamp_hardware-rescue" part="C-Device" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E53BD12</tstamp>
     </comp>
@@ -523,7 +523,7 @@
       <fields>
         <field name="NOBOM">1</field>
       </fields>
-      <libsource lib="5050RGB" part="CONN_1" description=""/>
+      <libsource lib="tensigral_lamp_hardware-rescue" part="CONN_1-5050RGB" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E598F1C</tstamp>
     </comp>
@@ -535,7 +535,7 @@
         <field name="Cost100">0.003738</field>
         <field name="LCSC">https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_Walsin-Tech-Corp-0805B223K500_C123617.html</field>
       </fields>
-      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <libsource lib="tensigral_lamp_hardware-rescue" part="C-Device" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E532390</tstamp>
     </comp>
@@ -547,7 +547,7 @@
         <field name="Cost100">0.003738</field>
         <field name="LCSC">https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_Walsin-Tech-Corp-0805B223K500_C123617.html</field>
       </fields>
-      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <libsource lib="tensigral_lamp_hardware-rescue" part="C-Device" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E531279</tstamp>
     </comp>
@@ -559,7 +559,7 @@
         <field name="Cost100">0.024623</field>
         <field name="LCSC">https://lcsc.com/product-detail/Pin-Header-Female-Header_Ckmtw-Shenzhen-Cankemeng-C124390_C124390.html</field>
       </fields>
-      <libsource lib="Connector_Generic" part="Conn_02x03_Odd_Even" description="Generic connector, double row, 02x03, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <libsource lib="tensigral_lamp_hardware-rescue" part="Conn_02x03_Odd_Even-Connector_Generic" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E0E340D</tstamp>
     </comp>
@@ -571,7 +571,7 @@
         <field name="Cost100">0.032871</field>
         <field name="LCSC">https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_FH-Guangdong-Fenghua-Advanced-Tech-0805F226M160NT_C116973.html</field>
       </fields>
-      <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <libsource lib="tensigral_lamp_hardware-rescue" part="C-Device" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E047396</tstamp>
     </comp>
@@ -583,7 +583,7 @@
         <field name="Cost100">.112</field>
         <field name="LCSC">https://www.aliexpress.com/item/32814778563.html</field>
       </fields>
-      <libsource lib="LED" part="WS2812B" description="RGB LED with integrated controller"/>
+      <libsource lib="tensigral_lamp_hardware-rescue" part="WS2812B-LED" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E0B8A33</tstamp>
     </comp>
@@ -595,7 +595,7 @@
         <field name="Cost100">.112</field>
         <field name="LCSC">https://www.aliexpress.com/item/32814778563.html</field>
       </fields>
-      <libsource lib="LED" part="WS2812B" description="RGB LED with integrated controller"/>
+      <libsource lib="tensigral_lamp_hardware-rescue" part="WS2812B-LED" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E0B95AB</tstamp>
     </comp>
@@ -607,7 +607,7 @@
         <field name="Cost100">.112</field>
         <field name="LCSC">https://www.aliexpress.com/item/32814778563.html</field>
       </fields>
-      <libsource lib="LED" part="WS2812B" description="RGB LED with integrated controller"/>
+      <libsource lib="tensigral_lamp_hardware-rescue" part="WS2812B-LED" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E0BA360</tstamp>
     </comp>
@@ -619,7 +619,7 @@
         <field name="Cost100">.112</field>
         <field name="LCSC">https://www.aliexpress.com/item/32814778563.html</field>
       </fields>
-      <libsource lib="LED" part="WS2812B" description="RGB LED with integrated controller"/>
+      <libsource lib="tensigral_lamp_hardware-rescue" part="WS2812B-LED" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E0BAE96</tstamp>
     </comp>
@@ -631,7 +631,7 @@
         <field name="Cost100">.112</field>
         <field name="LCSC">https://www.aliexpress.com/item/32814778563.html</field>
       </fields>
-      <libsource lib="LED" part="WS2812B" description="RGB LED with integrated controller"/>
+      <libsource lib="tensigral_lamp_hardware-rescue" part="WS2812B-LED" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E0BB9F8</tstamp>
     </comp>
@@ -643,7 +643,7 @@
         <field name="Cost100">.112</field>
         <field name="LCSC">https://www.aliexpress.com/item/32814778563.html</field>
       </fields>
-      <libsource lib="LED" part="WS2812B" description="RGB LED with integrated controller"/>
+      <libsource lib="tensigral_lamp_hardware-rescue" part="WS2812B-LED" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E0BC55B</tstamp>
     </comp>
@@ -655,7 +655,7 @@
         <field name="Cost100">.112</field>
         <field name="LCSC">https://www.aliexpress.com/item/32814778563.html</field>
       </fields>
-      <libsource lib="LED" part="WS2812B" description="RGB LED with integrated controller"/>
+      <libsource lib="tensigral_lamp_hardware-rescue" part="WS2812B-LED" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E0BD0BB</tstamp>
     </comp>
@@ -667,7 +667,7 @@
         <field name="Cost100">.112</field>
         <field name="LCSC">https://www.aliexpress.com/item/32814778563.html</field>
       </fields>
-      <libsource lib="LED" part="WS2812B" description="RGB LED with integrated controller"/>
+      <libsource lib="tensigral_lamp_hardware-rescue" part="WS2812B-LED" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E0BDC9C</tstamp>
     </comp>
@@ -679,7 +679,7 @@
         <field name="Cost100">.112</field>
         <field name="LCSC">https://www.aliexpress.com/item/32814778563.html</field>
       </fields>
-      <libsource lib="LED" part="WS2812B" description="RGB LED with integrated controller"/>
+      <libsource lib="tensigral_lamp_hardware-rescue" part="WS2812B-LED" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E0BE887</tstamp>
     </comp>
@@ -691,7 +691,7 @@
         <field name="Cost100">.112</field>
         <field name="LCSC">https://www.aliexpress.com/item/32814778563.html</field>
       </fields>
-      <libsource lib="LED" part="WS2812B" description="RGB LED with integrated controller"/>
+      <libsource lib="tensigral_lamp_hardware-rescue" part="WS2812B-LED" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E0BF375</tstamp>
     </comp>
@@ -703,7 +703,7 @@
         <field name="Cost100">.112</field>
         <field name="LCSC">https://www.aliexpress.com/item/32814778563.html</field>
       </fields>
-      <libsource lib="LED" part="WS2812B" description="RGB LED with integrated controller"/>
+      <libsource lib="tensigral_lamp_hardware-rescue" part="WS2812B-LED" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E0C0077</tstamp>
     </comp>
@@ -715,7 +715,7 @@
         <field name="Cost100">.112</field>
         <field name="LCSC">https://www.aliexpress.com/item/32814778563.html</field>
       </fields>
-      <libsource lib="LED" part="WS2812B" description="RGB LED with integrated controller"/>
+      <libsource lib="tensigral_lamp_hardware-rescue" part="WS2812B-LED" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E0C0C5B</tstamp>
     </comp>
@@ -727,7 +727,7 @@
         <field name="Cost100">.112</field>
         <field name="LCSC">https://www.aliexpress.com/item/32814778563.html</field>
       </fields>
-      <libsource lib="LED" part="WS2812B" description="RGB LED with integrated controller"/>
+      <libsource lib="tensigral_lamp_hardware-rescue" part="WS2812B-LED" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E0C1839</tstamp>
     </comp>
@@ -739,7 +739,7 @@
         <field name="Cost100">.112</field>
         <field name="LCSC">https://www.aliexpress.com/item/32814778563.html</field>
       </fields>
-      <libsource lib="LED" part="WS2812B" description="RGB LED with integrated controller"/>
+      <libsource lib="tensigral_lamp_hardware-rescue" part="WS2812B-LED" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E0C2692</tstamp>
     </comp>
@@ -751,7 +751,7 @@
         <field name="Cost100">.112</field>
         <field name="LCSC">https://www.aliexpress.com/item/32814778563.html</field>
       </fields>
-      <libsource lib="LED" part="WS2812B" description="RGB LED with integrated controller"/>
+      <libsource lib="tensigral_lamp_hardware-rescue" part="WS2812B-LED" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E0C3252</tstamp>
     </comp>
@@ -763,7 +763,7 @@
         <field name="Cost100">.112</field>
         <field name="LCSC">https://www.aliexpress.com/item/32814778563.html</field>
       </fields>
-      <libsource lib="LED" part="WS2812B" description="RGB LED with integrated controller"/>
+      <libsource lib="tensigral_lamp_hardware-rescue" part="WS2812B-LED" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E0C3EBA</tstamp>
     </comp>
@@ -775,7 +775,7 @@
         <field name="Cost100">.112</field>
         <field name="LCSC">https://www.aliexpress.com/item/32814778563.html</field>
       </fields>
-      <libsource lib="LED" part="WS2812B" description="RGB LED with integrated controller"/>
+      <libsource lib="tensigral_lamp_hardware-rescue" part="WS2812B-LED" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E0C69A6</tstamp>
     </comp>
@@ -787,7 +787,7 @@
         <field name="Cost100">.112</field>
         <field name="LCSC">https://www.aliexpress.com/item/32814778563.html</field>
       </fields>
-      <libsource lib="LED" part="WS2812B" description="RGB LED with integrated controller"/>
+      <libsource lib="tensigral_lamp_hardware-rescue" part="WS2812B-LED" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E0CA1BA</tstamp>
     </comp>
@@ -799,7 +799,7 @@
         <field name="Cost100">.837879</field>
         <field name="LCSC">https://lcsc.com/product-detail/MICROCHIP_MICROCHIP_ATTINY45-20SU_ATTINY45-20SU_C62689.html</field>
       </fields>
-      <libsource lib="MCU_Microchip_ATtiny" part="ATtiny85-20SU" description="20MHz, 8kB Flash, 512B SRAM, 512B EEPROM, debugWIRE, SOIJ-8"/>
+      <libsource lib="tensigral_lamp_hardware-rescue" part="ATtiny85-20SU-MCU_Microchip_ATtiny" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E384137</tstamp>
     </comp>
@@ -811,189 +811,19 @@
         <field name="Cost100">.112</field>
         <field name="LCSC">https://www.aliexpress.com/item/32814778563.html</field>
       </fields>
-      <libsource lib="LED" part="WS2812B" description="RGB LED with integrated controller"/>
+      <libsource lib="tensigral_lamp_hardware-rescue" part="WS2812B-LED" description=""/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>5E0CAC55</tstamp>
     </comp>
   </components>
   <libparts>
-    <libpart lib="5050RGB" part="AVRISP6">
-      <footprints>
-        <fp>AVR6PIN</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">J</field>
-        <field name="Value">AVRISP6</field>
-      </fields>
-      <pins>
-        <pin num="1" name="MISO" type="BiDi"/>
-        <pin num="2" name="VCC" type="BiDi"/>
-        <pin num="3" name="SCK" type="BiDi"/>
-        <pin num="4" name="MOSI" type="BiDi"/>
-        <pin num="5" name="RST" type="BiDi"/>
-        <pin num="6" name="GND" type="BiDi"/>
-      </pins>
-    </libpart>
-    <libpart lib="5050RGB" part="CONN_1">
-      <fields>
-        <field name="Reference">P</field>
-        <field name="Value">CONN_1</field>
-      </fields>
-      <pins>
-        <pin num="1" name="1" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="Connector" part="USB_B_Micro">
-      <aliases>
-        <alias>USB_B_Mini</alias>
-      </aliases>
-      <description>USB Micro Type B connector</description>
-      <docs>~</docs>
-      <footprints>
-        <fp>USB*</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">J</field>
-        <field name="Value">USB_B_Micro</field>
-      </fields>
-      <pins>
-        <pin num="1" name="VBUS" type="power_out"/>
-        <pin num="2" name="D-" type="passive"/>
-        <pin num="3" name="D+" type="passive"/>
-        <pin num="4" name="ID" type="passive"/>
-        <pin num="5" name="GND" type="power_out"/>
-        <pin num="6" name="Shield" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="Connector_Generic" part="Conn_01x03">
-      <description>Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
-      <docs>~</docs>
-      <footprints>
-        <fp>Connector*:*_1x??_*</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">J</field>
-        <field name="Value">Conn_01x03</field>
-      </fields>
-      <pins>
-        <pin num="1" name="Pin_1" type="passive"/>
-        <pin num="2" name="Pin_2" type="passive"/>
-        <pin num="3" name="Pin_3" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="Connector_Generic" part="Conn_02x03_Odd_Even">
-      <description>Generic connector, double row, 02x03, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)</description>
-      <docs>~</docs>
-      <footprints>
-        <fp>Connector*:*_2x??_*</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">J</field>
-        <field name="Value">Conn_02x03_Odd_Even</field>
-      </fields>
-      <pins>
-        <pin num="1" name="Pin_1" type="passive"/>
-        <pin num="2" name="Pin_2" type="passive"/>
-        <pin num="3" name="Pin_3" type="passive"/>
-        <pin num="4" name="Pin_4" type="passive"/>
-        <pin num="5" name="Pin_5" type="passive"/>
-        <pin num="6" name="Pin_6" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="Device" part="C">
-      <description>Unpolarized capacitor</description>
-      <docs>~</docs>
-      <footprints>
-        <fp>C_*</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">C</field>
-        <field name="Value">C</field>
-      </fields>
-      <pins>
-        <pin num="1" name="~" type="passive"/>
-        <pin num="2" name="~" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="Device" part="L">
-      <description>Inductor</description>
-      <docs>~</docs>
-      <footprints>
-        <fp>Choke_*</fp>
-        <fp>*Coil*</fp>
-        <fp>Inductor_*</fp>
-        <fp>L_*</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">L</field>
-        <field name="Value">L</field>
-      </fields>
-      <pins>
-        <pin num="1" name="1" type="passive"/>
-        <pin num="2" name="2" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="Device" part="Microphone">
-      <description>Microphone</description>
-      <docs>~</docs>
-      <fields>
-        <field name="Reference">MK</field>
-        <field name="Value">Microphone</field>
-      </fields>
-      <pins>
-        <pin num="1" name="-" type="passive"/>
-        <pin num="2" name="+" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="Device" part="R">
-      <description>Resistor</description>
-      <docs>~</docs>
-      <footprints>
-        <fp>R_*</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">R</field>
-        <field name="Value">R</field>
-      </fields>
-      <pins>
-        <pin num="1" name="~" type="passive"/>
-        <pin num="2" name="~" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="LED" part="WS2812B">
-      <description>RGB LED with integrated controller</description>
-      <docs>https://cdn-shop.adafruit.com/datasheets/WS2812B.pdf</docs>
-      <footprints>
-        <fp>LED*WS2812*PLCC*5.0x5.0mm*P3.2mm*</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">D</field>
-        <field name="Value">WS2812B</field>
-        <field name="Footprint">LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm</field>
-      </fields>
-      <pins>
-        <pin num="1" name="VDD" type="power_in"/>
-        <pin num="2" name="DOUT" type="output"/>
-        <pin num="3" name="VSS" type="power_in"/>
-        <pin num="4" name="DIN" type="input"/>
-      </pins>
-    </libpart>
-    <libpart lib="MCU_Microchip_ATtiny" part="ATtiny25V-10SU">
-      <aliases>
-        <alias>ATtiny25-20SU</alias>
-        <alias>ATtiny45V-10SU</alias>
-        <alias>ATtiny45-20SU</alias>
-        <alias>ATtiny85V-10SU</alias>
-        <alias>ATtiny85-20SU</alias>
-      </aliases>
-      <description>10MHz, 2kB Flash, 128B SRAM, 128B EEPROM, debugWIRE, SOIJ-8</description>
-      <docs>http://ww1.microchip.com/downloads/en/DeviceDoc/atmel-2586-avr-8-bit-microcontroller-attiny25-attiny45-attiny85_datasheet.pdf</docs>
+    <libpart lib="tensigral_lamp_hardware-rescue" part="ATtiny85-20SU-MCU_Microchip_ATtiny">
       <footprints>
         <fp>SOIJ*5.3x5.3mm*P1.27mm*</fp>
       </footprints>
       <fields>
         <field name="Reference">U</field>
-        <field name="Value">ATtiny25V-10SU</field>
+        <field name="Value">ATtiny85-20SU-MCU_Microchip_ATtiny</field>
         <field name="Footprint">Package_SO:SOIJ-8_5.3x5.3mm_P1.27mm</field>
       </fields>
       <pins>
@@ -1007,15 +837,150 @@
         <pin num="8" name="VCC" type="power_in"/>
       </pins>
     </libpart>
-    <libpart lib="MCU_ST_STM32F0" part="STM32F042F4Px">
-      <description>ARM Cortex-M0 MCU, 16KB flash, 6KB RAM, 48MHz, 2-3.6V, 16 GPIO, TSSOP-20</description>
-      <docs>http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00105814.pdf</docs>
+    <libpart lib="tensigral_lamp_hardware-rescue" part="AVRISP6-5050RGB">
+      <footprints>
+        <fp>AVR6PIN</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">AVRISP6-5050RGB</field>
+      </fields>
+      <pins>
+        <pin num="1" name="MISO" type="BiDi"/>
+        <pin num="2" name="VCC" type="BiDi"/>
+        <pin num="3" name="SCK" type="BiDi"/>
+        <pin num="4" name="MOSI" type="BiDi"/>
+        <pin num="5" name="RST" type="BiDi"/>
+        <pin num="6" name="GND" type="BiDi"/>
+      </pins>
+    </libpart>
+    <libpart lib="tensigral_lamp_hardware-rescue" part="C-Device">
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C-Device</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="tensigral_lamp_hardware-rescue" part="CONN_1-5050RGB">
+      <fields>
+        <field name="Reference">P</field>
+        <field name="Value">CONN_1-5050RGB</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="tensigral_lamp_hardware-rescue" part="Conn_01x03-Connector_Generic">
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x03-Connector_Generic</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="tensigral_lamp_hardware-rescue" part="Conn_02x03_Odd_Even-Connector_Generic">
+      <footprints>
+        <fp>Connector*:*_2x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_02x03_Odd_Even-Connector_Generic</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="tensigral_lamp_hardware-rescue" part="L-Device">
+      <footprints>
+        <fp>Choke_*</fp>
+        <fp>*Coil*</fp>
+        <fp>Inductor_*</fp>
+        <fp>L_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">L</field>
+        <field name="Value">L-Device</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="passive"/>
+        <pin num="2" name="2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="tensigral_lamp_hardware-rescue" part="MT2492-MT2492">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">MT2492-MT2492</field>
+      </fields>
+      <pins>
+        <pin num="1" name="BS" type="input"/>
+        <pin num="2" name="GND" type="input"/>
+        <pin num="3" name="FB" type="input"/>
+        <pin num="4" name="EN" type="input"/>
+        <pin num="5" name="IN" type="input"/>
+        <pin num="6" name="SW" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="tensigral_lamp_hardware-rescue" part="MXC400xXC-kicad">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">MXC400xXC-kicad</field>
+      </fields>
+      <pins>
+        <pin num="1" name="SCL" type="input"/>
+        <pin num="2" name="NC" type="input"/>
+        <pin num="3" name="GND" type="input"/>
+        <pin num="4" name="INT" type="input"/>
+        <pin num="5" name="SDA" type="input"/>
+        <pin num="6" name="VDD" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="tensigral_lamp_hardware-rescue" part="Microphone-Device">
+      <fields>
+        <field name="Reference">MK</field>
+        <field name="Value">Microphone-Device</field>
+      </fields>
+      <pins>
+        <pin num="1" name="-" type="passive"/>
+        <pin num="2" name="+" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="tensigral_lamp_hardware-rescue" part="R-Device">
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R-Device</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="tensigral_lamp_hardware-rescue" part="STM32F042F4Px-MCU_ST_STM32F0">
       <footprints>
         <fp>TSSOP*4.4x6.5mm*P0.65mm*</fp>
       </footprints>
       <fields>
         <field name="Reference">U</field>
-        <field name="Value">STM32F042F4Px</field>
+        <field name="Value">STM32F042F4Px-MCU_ST_STM32F0</field>
         <field name="Footprint">Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm</field>
       </fields>
       <pins>
@@ -1041,38 +1006,10 @@
         <pin num="20" name="PA14" type="BiDi"/>
       </pins>
     </libpart>
-    <libpart lib="MT2492" part="MT2492">
-      <fields>
-        <field name="Reference">U</field>
-        <field name="Value">MT2492</field>
-      </fields>
-      <pins>
-        <pin num="1" name="BS" type="input"/>
-        <pin num="2" name="GND" type="input"/>
-        <pin num="3" name="FB" type="input"/>
-        <pin num="4" name="EN" type="input"/>
-        <pin num="5" name="IN" type="input"/>
-        <pin num="6" name="SW" type="input"/>
-      </pins>
-    </libpart>
-    <libpart lib="kicad" part="MXC400xXC">
-      <fields>
-        <field name="Reference">U</field>
-        <field name="Value">MXC400xXC</field>
-      </fields>
-      <pins>
-        <pin num="1" name="SCL" type="input"/>
-        <pin num="2" name="NC" type="input"/>
-        <pin num="3" name="GND" type="input"/>
-        <pin num="4" name="INT" type="input"/>
-        <pin num="5" name="SDA" type="input"/>
-        <pin num="6" name="VDD" type="input"/>
-      </pins>
-    </libpart>
-    <libpart lib="tactile" part="TACTILE">
+    <libpart lib="tensigral_lamp_hardware-rescue" part="TACTILE-tactile">
       <fields>
         <field name="Reference">SW?</field>
-        <field name="Value">TACTILE</field>
+        <field name="Value">TACTILE-tactile</field>
       </fields>
       <pins>
         <pin num="1" name="~" type="input"/>
@@ -1081,43 +1018,48 @@
         <pin num="4" name="~" type="input"/>
       </pins>
     </libpart>
+    <libpart lib="tensigral_lamp_hardware-rescue" part="USB_B_Micro-Connector">
+      <footprints>
+        <fp>USB*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">USB_B_Micro-Connector</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VBUS" type="power_out"/>
+        <pin num="2" name="D-" type="passive"/>
+        <pin num="3" name="D+" type="passive"/>
+        <pin num="4" name="ID" type="passive"/>
+        <pin num="5" name="GND" type="power_out"/>
+        <pin num="6" name="Shield" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="tensigral_lamp_hardware-rescue" part="WS2812B-LED">
+      <footprints>
+        <fp>LED*WS2812*PLCC*5.0x5.0mm*P3.2mm*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">D</field>
+        <field name="Value">WS2812B-LED</field>
+        <field name="Footprint">LED_SMD:LED_WS2812B_PLCC4_5.0x5.0mm_P3.2mm</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VDD" type="power_in"/>
+        <pin num="2" name="DOUT" type="output"/>
+        <pin num="3" name="VSS" type="power_in"/>
+        <pin num="4" name="DIN" type="input"/>
+      </pins>
+    </libpart>
   </libparts>
   <libraries>
-    <library logical="5050RGB">
-      <uri>C:/Projects/kicad/5050RGB.lib</uri>
-    </library>
-    <library logical="Connector">
-      <uri>C:\Program Files\KiCad\share\kicad\library/Connector.lib</uri>
-    </library>
-    <library logical="Connector_Generic">
-      <uri>C:\Program Files\KiCad\share\kicad\library/Connector_Generic.lib</uri>
-    </library>
-    <library logical="Device">
-      <uri>C:\Program Files\KiCad\share\kicad\library/Device.lib</uri>
-    </library>
-    <library logical="LED">
-      <uri>C:\Program Files\KiCad\share\kicad\library/LED.lib</uri>
-    </library>
-    <library logical="MCU_Microchip_ATtiny">
-      <uri>C:\Program Files\KiCad\share\kicad\library/MCU_Microchip_ATtiny.lib</uri>
-    </library>
-    <library logical="MCU_ST_STM32F0">
-      <uri>C:\Program Files\KiCad\share\kicad\library/MCU_ST_STM32F0.lib</uri>
-    </library>
-    <library logical="MT2492">
-      <uri>C:\Projects\tensigral_lamp\tensigral_lamp_hardware/MT2492.lib</uri>
-    </library>
-    <library logical="kicad">
-      <uri>C:/Projects/kicad/kicad.lib</uri>
-    </library>
-    <library logical="tactile">
-      <uri>C:/Projects/kicad/tactile.lib</uri>
+    <library logical="tensigral_lamp_hardware-rescue">
+      <uri>/home/cnlohr/git/tensigral_lamp/tensigral_lamp_hardware/tensigral_lamp_hardware-rescue.lib</uri>
     </library>
   </libraries>
   <nets>
     <net code="1" name="GND">
       <node ref="D8" pin="3"/>
-      <node ref="U1" pin="15"/>
       <node ref="J4" pin="3"/>
       <node ref="C12" pin="2"/>
       <node ref="D18" pin="3"/>
@@ -1126,6 +1068,7 @@
       <node ref="D10" pin="3"/>
       <node ref="D20" pin="3"/>
       <node ref="R3" pin="1"/>
+      <node ref="U1" pin="15"/>
       <node ref="C13" pin="2"/>
       <node ref="C15" pin="2"/>
       <node ref="D14" pin="3"/>
@@ -1170,9 +1113,9 @@
       <node ref="P4" pin="1"/>
       <node ref="C9" pin="1"/>
       <node ref="C12" pin="1"/>
-      <node ref="U1" pin="5"/>
       <node ref="U1" pin="16"/>
       <node ref="L1" pin="2"/>
+      <node ref="U1" pin="5"/>
     </net>
     <net code="3" name="Net-(U4-Pad2)">
       <node ref="U4" pin="2"/>
@@ -1183,22 +1126,22 @@
       <node ref="R5" pin="2"/>
     </net>
     <net code="5" name="AUXVCC">
-      <node ref="U4" pin="6"/>
-      <node ref="C16" pin="1"/>
-      <node ref="U3" pin="8"/>
-      <node ref="R4" pin="2"/>
-      <node ref="R5" pin="1"/>
       <node ref="J5" pin="2"/>
+      <node ref="C16" pin="1"/>
+      <node ref="U4" pin="6"/>
+      <node ref="U3" pin="8"/>
+      <node ref="R5" pin="1"/>
+      <node ref="R4" pin="2"/>
       <node ref="C17" pin="1"/>
     </net>
     <net code="6" name="ASDA">
+      <node ref="R4" pin="1"/>
       <node ref="U4" pin="5"/>
       <node ref="U3" pin="2"/>
-      <node ref="R4" pin="1"/>
     </net>
     <net code="7" name="AUXGND">
-      <node ref="U3" pin="4"/>
       <node ref="C17" pin="2"/>
+      <node ref="U3" pin="4"/>
       <node ref="J5" pin="6"/>
       <node ref="C16" pin="2"/>
       <node ref="U4" pin="3"/>
@@ -1207,8 +1150,8 @@
       <node ref="U4" pin="4"/>
     </net>
     <net code="9" name="Net-(R3-Pad2)">
-      <node ref="U1" pin="1"/>
       <node ref="R3" pin="2"/>
+      <node ref="U1" pin="1"/>
       <node ref="SW1" pin="4"/>
     </net>
     <net code="10" name="PA4">
@@ -1231,15 +1174,15 @@
     </net>
     <net code="15" name="WS2812U">
       <node ref="J4" pin="2"/>
-      <node ref="U1" pin="13"/>
       <node ref="P8" pin="1"/>
+      <node ref="U1" pin="13"/>
     </net>
     <net code="16" name="VUSB">
-      <node ref="J4" pin="1"/>
-      <node ref="U2" pin="4"/>
+      <node ref="J2" pin="2"/>
       <node ref="C14" pin="1"/>
       <node ref="C13" pin="1"/>
-      <node ref="J2" pin="2"/>
+      <node ref="U2" pin="4"/>
+      <node ref="J4" pin="1"/>
       <node ref="U2" pin="5"/>
       <node ref="J1" pin="1"/>
     </net>
@@ -1260,8 +1203,8 @@
       <node ref="D18" pin="4"/>
     </net>
     <net code="21" name="Net-(D15-Pad2)">
-      <node ref="D15" pin="2"/>
       <node ref="D16" pin="4"/>
+      <node ref="D15" pin="2"/>
     </net>
     <net code="22" name="Net-(D2-Pad2)">
       <node ref="D2" pin="2"/>
@@ -1275,12 +1218,12 @@
       <node ref="J5" pin="3"/>
     </net>
     <net code="25" name="Net-(J5-Pad1)">
-      <node ref="U3" pin="6"/>
       <node ref="J5" pin="1"/>
+      <node ref="U3" pin="6"/>
     </net>
     <net code="26" name="Net-(J5-Pad5)">
-      <node ref="U3" pin="1"/>
       <node ref="J5" pin="5"/>
+      <node ref="U3" pin="1"/>
     </net>
     <net code="27" name="AUXEXTRA">
       <node ref="J5" pin="4"/>
@@ -1305,11 +1248,11 @@
       <node ref="D17" pin="1"/>
       <node ref="D16" pin="1"/>
       <node ref="D15" pin="1"/>
+      <node ref="D3" pin="1"/>
       <node ref="D7" pin="1"/>
-      <node ref="D6" pin="1"/>
       <node ref="D5" pin="1"/>
       <node ref="C10" pin="1"/>
-      <node ref="D3" pin="1"/>
+      <node ref="D6" pin="1"/>
       <node ref="C2" pin="1"/>
       <node ref="D11" pin="1"/>
       <node ref="D8" pin="1"/>
@@ -1319,20 +1262,20 @@
       <node ref="D13" pin="1"/>
       <node ref="D12" pin="1"/>
       <node ref="D20" pin="1"/>
-      <node ref="P3" pin="1"/>
+      <node ref="D1" pin="1"/>
+      <node ref="D2" pin="1"/>
+      <node ref="D19" pin="1"/>
       <node ref="C8" pin="1"/>
       <node ref="C7" pin="1"/>
+      <node ref="P3" pin="1"/>
+      <node ref="C3" pin="1"/>
+      <node ref="C4" pin="1"/>
       <node ref="C6" pin="1"/>
       <node ref="C5" pin="1"/>
-      <node ref="C4" pin="1"/>
-      <node ref="C3" pin="1"/>
-      <node ref="D1" pin="1"/>
-      <node ref="D19" pin="1"/>
-      <node ref="D2" pin="1"/>
     </net>
     <net code="32" name="NRST">
-      <node ref="U1" pin="4"/>
       <node ref="C15" pin="1"/>
+      <node ref="U1" pin="4"/>
       <node ref="J2" pin="5"/>
     </net>
     <net code="33" name="SWC">
@@ -1349,8 +1292,8 @@
       <node ref="U1" pin="8"/>
     </net>
     <net code="36" name="Net-(D14-Pad2)">
-      <node ref="D15" pin="4"/>
       <node ref="D14" pin="2"/>
+      <node ref="D15" pin="4"/>
     </net>
     <net code="37" name="Net-(D13-Pad2)">
       <node ref="D13" pin="2"/>
@@ -1365,8 +1308,8 @@
       <node ref="D12" pin="4"/>
     </net>
     <net code="40" name="Net-(D10-Pad2)">
-      <node ref="D11" pin="4"/>
       <node ref="D10" pin="2"/>
+      <node ref="D11" pin="4"/>
     </net>
     <net code="41" name="Net-(D10-Pad4)">
       <node ref="D9" pin="2"/>
@@ -1377,40 +1320,40 @@
       <node ref="D7" pin="2"/>
     </net>
     <net code="43" name="Net-(D6-Pad2)">
-      <node ref="D6" pin="2"/>
       <node ref="D7" pin="4"/>
+      <node ref="D6" pin="2"/>
     </net>
-    <net code="44" name="PF1">
-      <node ref="U1" pin="3"/>
-      <node ref="J3" pin="2"/>
-    </net>
-    <net code="45" name="PF0">
-      <node ref="J3" pin="4"/>
-      <node ref="U1" pin="2"/>
-    </net>
-    <net code="46" name="PA6">
-      <node ref="J3" pin="5"/>
-      <node ref="U1" pin="12"/>
-    </net>
-    <net code="47" name="PA5">
-      <node ref="U1" pin="11"/>
-      <node ref="J3" pin="3"/>
-    </net>
-    <net code="48" name="Net-(T2-Pad1)">
+    <net code="44" name="Net-(T2-Pad1)">
       <node ref="U1" pin="9"/>
       <node ref="T2" pin="1"/>
     </net>
-    <net code="49" name="Net-(T1-Pad1)">
+    <net code="45" name="Net-(T1-Pad1)">
       <node ref="U1" pin="7"/>
       <node ref="T1" pin="1"/>
     </net>
-    <net code="50" name="Net-(T0-Pad1)">
+    <net code="46" name="Net-(T0-Pad1)">
       <node ref="U1" pin="6"/>
       <node ref="T0" pin="1"/>
     </net>
+    <net code="47" name="PF1">
+      <node ref="J3" pin="2"/>
+      <node ref="U1" pin="3"/>
+    </net>
+    <net code="48" name="PF0">
+      <node ref="J3" pin="4"/>
+      <node ref="U1" pin="2"/>
+    </net>
+    <net code="49" name="PA6">
+      <node ref="U1" pin="12"/>
+      <node ref="J3" pin="5"/>
+    </net>
+    <net code="50" name="PA5">
+      <node ref="U1" pin="11"/>
+      <node ref="J3" pin="3"/>
+    </net>
     <net code="51" name="Net-(D8-Pad2)">
-      <node ref="D9" pin="4"/>
       <node ref="D8" pin="2"/>
+      <node ref="D9" pin="4"/>
     </net>
     <net code="52" name="Net-(D16-Pad2)">
       <node ref="D17" pin="4"/>
@@ -1428,20 +1371,20 @@
       <node ref="J1" pin="3"/>
     </net>
     <net code="56" name="D-">
-      <node ref="J1" pin="2"/>
       <node ref="U1" pin="17"/>
+      <node ref="J1" pin="2"/>
     </net>
     <net code="57" name="WS2812UM">
       <node ref="P2" pin="1"/>
     </net>
     <net code="58" name="Net-(C11-Pad2)">
-      <node ref="C11" pin="2"/>
       <node ref="L1" pin="1"/>
+      <node ref="C11" pin="2"/>
       <node ref="U2" pin="6"/>
     </net>
     <net code="59" name="Net-(C11-Pad1)">
-      <node ref="C11" pin="1"/>
       <node ref="U2" pin="1"/>
+      <node ref="C11" pin="1"/>
     </net>
     <net code="60" name="Net-(R1-Pad1)">
       <node ref="R2" pin="2"/>
