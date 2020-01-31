@@ -1,5 +1,4 @@
 EESchema Schematic File Version 4
-LIBS:tensigral_lamp_hardware-cache
 EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
@@ -15,7 +14,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L power:GND #PWR0121
+L tensigral_lamp_hardware-rescue:GND-power #PWR0121
 U 1 1 5E046363
 P 8350 1400
 F 0 "#PWR0121" H 8350 1150 50  0001 C CNN
@@ -26,7 +25,7 @@ F 3 "" H 8350 1400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0137
+L tensigral_lamp_hardware-rescue:GND-power #PWR0137
 U 1 1 5E0579A9
 P 8350 2750
 F 0 "#PWR0137" H 8350 2500 50  0001 C CNN
@@ -39,7 +38,7 @@ $EndComp
 Wire Wire Line
 	8650 1100 8650 1750
 $Comp
-L power:GND #PWR0139
+L tensigral_lamp_hardware-rescue:GND-power #PWR0139
 U 1 1 5E060A8D
 P 9550 1100
 F 0 "#PWR0139" H 9550 850 50  0001 C CNN
@@ -50,7 +49,7 @@ F 3 "" H 9550 1100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0141
+L tensigral_lamp_hardware-rescue:GND-power #PWR0141
 U 1 1 5E088A74
 P 9950 1100
 F 0 "#PWR0141" H 9950 850 50  0001 C CNN
@@ -61,7 +60,7 @@ F 3 "" H 9950 1100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0143
+L tensigral_lamp_hardware-rescue:GND-power #PWR0143
 U 1 1 5E08C888
 P 10350 1100
 F 0 "#PWR0143" H 10350 850 50  0001 C CNN
@@ -72,7 +71,7 @@ F 3 "" H 10350 1100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0145
+L tensigral_lamp_hardware-rescue:GND-power #PWR0145
 U 1 1 5E08C89C
 P 10750 1100
 F 0 "#PWR0145" H 10750 850 50  0001 C CNN
@@ -83,7 +82,7 @@ F 3 "" H 10750 1100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0147
+L tensigral_lamp_hardware-rescue:GND-power #PWR0147
 U 1 1 5E092F58
 P 9550 2000
 F 0 "#PWR0147" H 9550 1750 50  0001 C CNN
@@ -94,7 +93,7 @@ F 3 "" H 9550 2000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0149
+L tensigral_lamp_hardware-rescue:GND-power #PWR0149
 U 1 1 5E092F6C
 P 9950 2000
 F 0 "#PWR0149" H 9950 1750 50  0001 C CNN
@@ -105,7 +104,7 @@ F 3 "" H 9950 2000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0151
+L tensigral_lamp_hardware-rescue:GND-power #PWR0151
 U 1 1 5E092F80
 P 10350 2000
 F 0 "#PWR0151" H 10350 1750 50  0001 C CNN
@@ -116,7 +115,7 @@ F 3 "" H 10350 2000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0153
+L tensigral_lamp_hardware-rescue:GND-power #PWR0153
 U 1 1 5E092F94
 P 10750 2000
 F 0 "#PWR0153" H 10750 1750 50  0001 C CNN
@@ -127,7 +126,7 @@ F 3 "" H 10750 2000 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0155
+L tensigral_lamp_hardware-rescue:GND-power #PWR0155
 U 1 1 5E095C7F
 P 4350 5850
 F 0 "#PWR0155" H 4350 5600 50  0001 C CNN
@@ -138,7 +137,7 @@ F 3 "" H 4350 5850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0102
+L tensigral_lamp_hardware-rescue:GND-power #PWR0102
 U 1 1 5E022C2A
 P 2400 1150
 F 0 "#PWR0102" H 2400 900 50  0001 C CNN
@@ -149,7 +148,7 @@ F 3 "" H 2400 1150 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L power:GND #PWR0101
+L tensigral_lamp_hardware-rescue:GND-power #PWR0101
 U 1 1 5E0225C4
 P 2400 1300
 F 0 "#PWR0101" H 2400 1050 50  0001 C CNN
@@ -160,7 +159,7 @@ F 3 "" H 2400 1300 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L 5050RGB:CONN_1 P6
+L tensigral_lamp_hardware-rescue:CONN_1-5050RGB P6
 U 1 1 5E021E8D
 P 2550 1300
 F 0 "P6" V 2429 1359 40  0000 L CNN
@@ -172,7 +171,7 @@ F 4 "1" V 2550 1300 50  0001 C CNN "NOBOM"
 	1    0    0    -1  
 $EndComp
 $Comp
-L 5050RGB:CONN_1 P5
+L tensigral_lamp_hardware-rescue:CONN_1-5050RGB P5
 U 1 1 5E021E87
 P 2550 1150
 F 0 "P5" V 2429 1209 40  0000 L CNN
@@ -184,7 +183,7 @@ F 4 "1" V 2550 1150 50  0001 C CNN "NOBOM"
 	1    0    0    -1  
 $EndComp
 $Comp
-L 5050RGB:CONN_1 P4
+L tensigral_lamp_hardware-rescue:CONN_1-5050RGB P4
 U 1 1 5E01EF54
 P 2550 1000
 F 0 "P4" V 2429 1059 40  0000 L CNN
@@ -196,7 +195,7 @@ F 4 "1" V 2550 1000 50  0001 C CNN "NOBOM"
 	1    0    0    -1  
 $EndComp
 $Comp
-L 5050RGB:CONN_1 P3
+L tensigral_lamp_hardware-rescue:CONN_1-5050RGB P3
 U 1 1 5E01EF4A
 P 2550 850
 F 0 "P3" V 2429 909 40  0000 L CNN
@@ -208,7 +207,7 @@ F 4 "1" V 2550 850 50  0001 C CNN "NOBOM"
 	1    0    0    -1  
 $EndComp
 $Comp
-L 5050RGB:CONN_1 P2
+L tensigral_lamp_hardware-rescue:CONN_1-5050RGB P2
 U 1 1 5E01D4B1
 P 5050 4700
 F 0 "P2" V 4929 4759 40  0000 L CNN
@@ -220,7 +219,7 @@ F 4 "1" V 5050 4700 50  0001 C CNN "NOBOM"
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0157
+L tensigral_lamp_hardware-rescue:GND-power #PWR0157
 U 1 1 5E0E8A2D
 P 3850 3900
 F 0 "#PWR0157" H 3850 3650 50  0001 C CNN
@@ -231,7 +230,7 @@ F 3 "" H 3850 3900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0158
+L tensigral_lamp_hardware-rescue:GND-power #PWR0158
 U 1 1 5E0E8A33
 P 4900 3900
 F 0 "#PWR0158" H 4900 3650 50  0001 C CNN
@@ -242,7 +241,7 @@ F 3 "" H 4900 3900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0159
+L tensigral_lamp_hardware-rescue:GND-power #PWR0159
 U 1 1 5E0E8A39
 P 5950 3900
 F 0 "#PWR0159" H 5950 3650 50  0001 C CNN
@@ -257,7 +256,7 @@ Wire Wire Line
 Wire Wire Line
 	5200 3600 5650 3600
 $Comp
-L power:GND #PWR0160
+L tensigral_lamp_hardware-rescue:GND-power #PWR0160
 U 1 1 5E0E8A47
 P 7000 3900
 F 0 "#PWR0160" H 7000 3650 50  0001 C CNN
@@ -272,7 +271,7 @@ Wire Wire Line
 Wire Wire Line
 	8650 2450 8650 3050
 $Comp
-L power:GND #PWR0106
+L tensigral_lamp_hardware-rescue:GND-power #PWR0106
 U 1 1 5E11C069
 P 8000 3900
 F 0 "#PWR0106" H 8000 3650 50  0001 C CNN
@@ -283,7 +282,7 @@ F 3 "" H 8000 3900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0115
+L tensigral_lamp_hardware-rescue:GND-power #PWR0115
 U 1 1 5E11C06F
 P 9050 3900
 F 0 "#PWR0115" H 9050 3650 50  0001 C CNN
@@ -294,7 +293,7 @@ F 3 "" H 9050 3900 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0116
+L tensigral_lamp_hardware-rescue:GND-power #PWR0116
 U 1 1 5E11C075
 P 10100 3900
 F 0 "#PWR0116" H 10100 3650 50  0001 C CNN
@@ -309,7 +308,7 @@ Wire Wire Line
 Wire Wire Line
 	9350 3600 9800 3600
 $Comp
-L Connector:USB_B_Micro J1
+L tensigral_lamp_hardware-rescue:USB_B_Micro-Connector J1
 U 1 1 5E150F26
 P 1150 6250
 F 0 "J1" H 1207 6717 50  0000 C CNN
@@ -322,7 +321,7 @@ F 5 ".037085" H 1150 6250 50  0001 C CNN "Cost100"
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0120
+L tensigral_lamp_hardware-rescue:GND-power #PWR0120
 U 1 1 5E15AEBC
 P 1150 6650
 F 0 "#PWR0120" H 1150 6400 50  0001 C CNN
@@ -333,7 +332,7 @@ F 3 "" H 1150 6650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0165
+L tensigral_lamp_hardware-rescue:GND-power #PWR0165
 U 1 1 5E15CC16
 P 1050 6650
 F 0 "#PWR0165" H 1050 6400 50  0001 C CNN
@@ -344,7 +343,7 @@ F 3 "" H 1050 6650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L MCU_ST_STM32F0:STM32F042F4Px U1
+L tensigral_lamp_hardware-rescue:STM32F042F4Px-MCU_ST_STM32F0 U1
 U 1 1 5E172553
 P 1800 4350
 F 0 "U1" H 1800 4450 50  0000 C CNN
@@ -357,7 +356,7 @@ F 5 "0.822727" H 1800 4350 50  0001 C CNN "Cost100"
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0105
+L tensigral_lamp_hardware-rescue:GND-power #PWR0105
 U 1 1 5E18B0D6
 P 1600 5150
 F 0 "#PWR0105" H 1600 4900 50  0001 C CNN
@@ -368,7 +367,7 @@ F 3 "" H 1600 5150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+3V8 #PWR0104
+L tensigral_lamp_hardware-rescue:+3V8-power #PWR0104
 U 1 1 5E1EF650
 P 4350 5550
 F 0 "#PWR0104" H 4350 5400 50  0001 C CNN
@@ -379,7 +378,7 @@ F 3 "" H 4350 5550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+3V8 #PWR0111
+L tensigral_lamp_hardware-rescue:+3V8-power #PWR0111
 U 1 1 5E1F1D41
 P 1700 3650
 F 0 "#PWR0111" H 1700 3500 50  0001 C CNN
@@ -390,7 +389,7 @@ F 3 "" H 1700 3650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+3V8 #PWR0112
+L tensigral_lamp_hardware-rescue:+3V8-power #PWR0112
 U 1 1 5E1F32D4
 P 1600 3650
 F 0 "#PWR0112" H 1600 3500 50  0001 C CNN
@@ -419,7 +418,7 @@ Wire Wire Line
 Wire Wire Line
 	1300 2450 1750 2450
 $Comp
-L power:GND #PWR0133
+L tensigral_lamp_hardware-rescue:GND-power #PWR0133
 U 1 1 5E057988
 P 3100 2750
 F 0 "#PWR0133" H 3100 2500 50  0001 C CNN
@@ -430,7 +429,7 @@ F 3 "" H 3100 2750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0132
+L tensigral_lamp_hardware-rescue:GND-power #PWR0132
 U 1 1 5E057982
 P 2050 2750
 F 0 "#PWR0132" H 2050 2500 50  0001 C CNN
@@ -441,7 +440,7 @@ F 3 "" H 2050 2750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0131
+L tensigral_lamp_hardware-rescue:GND-power #PWR0131
 U 1 1 5E05797C
 P 1000 2750
 F 0 "#PWR0131" H 1000 2500 50  0001 C CNN
@@ -458,7 +457,7 @@ Wire Wire Line
 Wire Wire Line
 	4450 2450 4900 2450
 $Comp
-L power:GND #PWR0126
+L tensigral_lamp_hardware-rescue:GND-power #PWR0126
 U 1 1 5E057949
 P 7300 2750
 F 0 "#PWR0126" H 7300 2500 50  0001 C CNN
@@ -469,7 +468,7 @@ F 3 "" H 7300 2750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0125
+L tensigral_lamp_hardware-rescue:GND-power #PWR0125
 U 1 1 5E057943
 P 6250 2750
 F 0 "#PWR0125" H 6250 2500 50  0001 C CNN
@@ -480,7 +479,7 @@ F 3 "" H 6250 2750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0124
+L tensigral_lamp_hardware-rescue:GND-power #PWR0124
 U 1 1 5E05793D
 P 5200 2750
 F 0 "#PWR0124" H 5200 2500 50  0001 C CNN
@@ -491,7 +490,7 @@ F 3 "" H 5200 2750 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0123
+L tensigral_lamp_hardware-rescue:GND-power #PWR0123
 U 1 1 5E057937
 P 4150 2750
 F 0 "#PWR0123" H 4150 2500 50  0001 C CNN
@@ -512,7 +511,7 @@ Wire Wire Line
 Wire Wire Line
 	4450 1100 4900 1100
 $Comp
-L power:GND #PWR0110
+L tensigral_lamp_hardware-rescue:GND-power #PWR0110
 U 1 1 5E02FC41
 P 7300 1400
 F 0 "#PWR0110" H 7300 1150 50  0001 C CNN
@@ -523,7 +522,7 @@ F 3 "" H 7300 1400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0109
+L tensigral_lamp_hardware-rescue:GND-power #PWR0109
 U 1 1 5E02F8C7
 P 6250 1400
 F 0 "#PWR0109" H 6250 1150 50  0001 C CNN
@@ -534,7 +533,7 @@ F 3 "" H 6250 1400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0108
+L tensigral_lamp_hardware-rescue:GND-power #PWR0108
 U 1 1 5E02F4AE
 P 5200 1400
 F 0 "#PWR0108" H 5200 1150 50  0001 C CNN
@@ -545,7 +544,7 @@ F 3 "" H 5200 1400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0107
+L tensigral_lamp_hardware-rescue:GND-power #PWR0107
 U 1 1 5E02E290
 P 4150 1400
 F 0 "#PWR0107" H 4150 1150 50  0001 C CNN
@@ -556,7 +555,7 @@ F 3 "" H 4150 1400 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L LED:WS2812B D4
+L tensigral_lamp_hardware-rescue:WS2812B-LED D4
 U 1 1 5E0279C7
 P 4150 1100
 F 0 "D4" H 4494 1146 50  0000 L CNN
@@ -569,7 +568,7 @@ F 5 ".112" H 4150 1100 50  0001 C CNN "Cost100"
 	1    0    0    -1  
 $EndComp
 $Comp
-L 5050RGB:CONN_1 P1
+L tensigral_lamp_hardware-rescue:CONN_1-5050RGB P1
 U 1 1 5E01C21A
 P 3250 1100
 F 0 "P1" V 3129 1159 40  0000 L CNN
@@ -631,7 +630,7 @@ VLED
 Text GLabel 2400 850  0    50   Input ~ 0
 VLED
 $Comp
-L MT2492:MT2492 U2
+L tensigral_lamp_hardware-rescue:MT2492-MT2492 U2
 U 1 1 5E02B8D7
 P 2900 6250
 F 0 "U2" H 2900 6575 50  0000 C CNN
@@ -650,7 +649,7 @@ VUSB
 Text GLabel 1450 6050 2    50   Input ~ 0
 VUSB
 $Comp
-L Device:C C13
+L tensigral_lamp_hardware-rescue:C-Device C13
 U 1 1 5E043CC9
 P 2600 7050
 F 0 "C13" H 2715 7096 50  0000 L CNN
@@ -681,7 +680,7 @@ VLED
 Text GLabel 2850 950  1    50   Input ~ 0
 VLED
 $Comp
-L power:+3V8 #PWR0103
+L tensigral_lamp_hardware-rescue:+3V8-power #PWR0103
 U 1 1 5E072DAC
 P 2400 1000
 F 0 "#PWR0103" H 2400 850 50  0001 C CNN
@@ -692,7 +691,7 @@ F 3 "" H 2400 1000 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L power:GND #PWR0113
+L tensigral_lamp_hardware-rescue:GND-power #PWR0113
 U 1 1 5E0792BA
 P 2850 1250
 F 0 "#PWR0113" H 2850 1000 50  0001 C CNN
@@ -703,7 +702,7 @@ F 3 "" H 2850 1250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C12
+L tensigral_lamp_hardware-rescue:C-Device C12
 U 1 1 5E07E153
 P 3950 5700
 F 0 "C12" H 4065 5746 50  0000 L CNN
@@ -720,7 +719,7 @@ VUSB
 Text GLabel 3000 6900 1    50   Input ~ 0
 VUSB
 $Comp
-L power:GND #PWR0114
+L tensigral_lamp_hardware-rescue:GND-power #PWR0114
 U 1 1 5E084BAB
 P 2600 7200
 F 0 "#PWR0114" H 2600 6950 50  0001 C CNN
@@ -731,7 +730,7 @@ F 3 "" H 2600 7200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0117
+L tensigral_lamp_hardware-rescue:GND-power #PWR0117
 U 1 1 5E085D4D
 P 3000 7200
 F 0 "#PWR0117" H 3000 6950 50  0001 C CNN
@@ -742,7 +741,7 @@ F 3 "" H 3000 7200 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0118
+L tensigral_lamp_hardware-rescue:GND-power #PWR0118
 U 1 1 5E086C4F
 P 3950 5850
 F 0 "#PWR0118" H 3950 5600 50  0001 C CNN
@@ -753,7 +752,7 @@ F 3 "" H 3950 5850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+3V8 #PWR0119
+L tensigral_lamp_hardware-rescue:+3V8-power #PWR0119
 U 1 1 5E087DD2
 P 3950 5550
 F 0 "#PWR0119" H 3950 5400 50  0001 C CNN
@@ -764,7 +763,7 @@ F 3 "" H 3950 5550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:L L1
+L tensigral_lamp_hardware-rescue:L-Device L1
 U 1 1 5E08A6A5
 P 3500 6150
 F 0 "L1" V 3690 6150 50  0000 C CNN
@@ -777,7 +776,7 @@ F 5 "0.028295" V 3500 6150 50  0001 C CNN "Cost100"
 	0    -1   -1   0   
 $EndComp
 $Comp
-L power:+3V8 #PWR0122
+L tensigral_lamp_hardware-rescue:+3V8-power #PWR0122
 U 1 1 5E08B8FC
 P 3650 6150
 F 0 "#PWR0122" H 3650 6000 50  0001 C CNN
@@ -790,7 +789,7 @@ $EndComp
 Wire Wire Line
 	3350 6150 3250 6150
 $Comp
-L Device:C C11
+L tensigral_lamp_hardware-rescue:C-Device C11
 U 1 1 5E08F68D
 P 2900 5750
 F 0 "C11" H 3015 5796 50  0000 L CNN
@@ -814,7 +813,7 @@ Wire Wire Line
 Wire Wire Line
 	2650 5750 2650 6150
 $Comp
-L power:GND #PWR0127
+L tensigral_lamp_hardware-rescue:GND-power #PWR0127
 U 1 1 5E092368
 P 2650 6250
 F 0 "#PWR0127" H 2650 6000 50  0001 C CNN
@@ -825,7 +824,7 @@ F 3 "" H 2650 6250 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 $Comp
-L power:GND #PWR0128
+L tensigral_lamp_hardware-rescue:GND-power #PWR0128
 U 1 1 5E093145
 P 2200 6650
 F 0 "#PWR0128" H 2200 6400 50  0001 C CNN
@@ -836,7 +835,7 @@ F 3 "" H 2200 6650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R2
+L tensigral_lamp_hardware-rescue:R-Device R2
 U 1 1 5E0965D7
 P 2200 6500
 F 0 "R2" H 2130 6454 50  0000 R CNN
@@ -851,7 +850,7 @@ $EndComp
 Wire Wire Line
 	2200 6350 2650 6350
 $Comp
-L power:+3V8 #PWR0129
+L tensigral_lamp_hardware-rescue:+3V8-power #PWR0129
 U 1 1 5E0A5A0F
 P 2200 6050
 F 0 "#PWR0129" H 2200 5900 50  0001 C CNN
@@ -862,7 +861,7 @@ F 3 "" H 2200 6050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R1
+L tensigral_lamp_hardware-rescue:R-Device R1
 U 1 1 5E0A6998
 P 2200 6200
 F 0 "R1" H 2130 6154 50  0000 R CNN
@@ -882,7 +881,7 @@ WS2812U
 Text GLabel 4900 4700 0    50   Input ~ 0
 WS2812UM
 $Comp
-L 5050RGB:CONN_1 T0
+L tensigral_lamp_hardware-rescue:CONN_1-5050RGB T0
 U 1 1 5E0C2521
 P 2550 3850
 F 0 "T0" H 2600 3850 40  0000 L CNN
@@ -894,7 +893,7 @@ F 4 "1" H 2550 3850 50  0001 C CNN "NOBOM"
 	1    0    0    -1  
 $EndComp
 $Comp
-L 5050RGB:CONN_1 T1
+L tensigral_lamp_hardware-rescue:CONN_1-5050RGB T1
 U 1 1 5E0D2568
 P 2550 3950
 F 0 "T1" H 2600 3950 40  0000 L CNN
@@ -906,7 +905,7 @@ F 4 "1" H 2550 3950 50  0001 C CNN "NOBOM"
 	1    0    0    -1  
 $EndComp
 $Comp
-L 5050RGB:CONN_1 T2
+L tensigral_lamp_hardware-rescue:CONN_1-5050RGB T2
 U 1 1 5E0D313A
 P 2550 4150
 F 0 "T2" H 2600 4150 40  0000 L CNN
@@ -924,7 +923,7 @@ SWC
 Text GLabel 1200 3850 0    50   Input ~ 0
 NRST
 $Comp
-L Device:C C15
+L tensigral_lamp_hardware-rescue:C-Device C15
 U 1 1 5E0D8B71
 P 3450 7050
 F 0 "C15" H 3565 7096 50  0000 L CNN
@@ -939,7 +938,7 @@ $EndComp
 Text GLabel 3450 6900 1    50   Input ~ 0
 NRST
 $Comp
-L power:GND #PWR0130
+L tensigral_lamp_hardware-rescue:GND-power #PWR0130
 U 1 1 5E0DA72F
 P 3450 7200
 F 0 "#PWR0130" H 3450 6950 50  0001 C CNN
@@ -952,7 +951,7 @@ $EndComp
 Text GLabel 1550 950  2    50   Input ~ 0
 VUSB
 $Comp
-L power:GND #PWR0134
+L tensigral_lamp_hardware-rescue:GND-power #PWR0134
 U 1 1 5E0E4A3D
 P 1550 1150
 F 0 "#PWR0134" H 1550 900 50  0001 C CNN
@@ -969,7 +968,7 @@ SWC
 Text GLabel 1050 950  0    50   Input ~ 0
 SWD
 $Comp
-L Device:R R3
+L tensigral_lamp_hardware-rescue:R-Device R3
 U 1 1 5E110972
 P 700 5200
 F 0 "R3" H 630 5154 50  0000 R CNN
@@ -982,7 +981,7 @@ F 5 ".00104" H 700 5200 50  0001 C CNN "Cost100"
 	-1   0    0    1   
 $EndComp
 $Comp
-L power:GND #PWR0135
+L tensigral_lamp_hardware-rescue:GND-power #PWR0135
 U 1 1 5E1113D8
 P 700 5350
 F 0 "#PWR0135" H 700 5100 50  0001 C CNN
@@ -993,15 +992,15 @@ F 3 "" H 700 5350 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L tactile:TACTILE SW1
+L tensigral_lamp_hardware-rescue:TACTILE-tactile SW1
 U 1 1 5E120FD9
 P 800 4400
 F 0 "SW1" V 400 4150 60  0000 L CNN
 F 1 "TACTILE" V 1200 4350 60  0000 L CNN
 F 2 "kicad:TACTILE10B" V 906 4588 60  0001 L CNN
 F 3 "" H 800 4400 60  0000 C CNN
-F 4 "https://lcsc.com/product-detail/Tactile-Switches_BOOMELE-Boom-Precision-Elec-C174049_C174049.html" V 800 4400 50  0001 C CNN "LCSC"
-F 5 "0.007906" V 800 4400 50  0001 C CNN "Cost100"
+F 4 "https://lcsc.com/product-detail/Tactile-Switches_SHOU-HAN-TS665TP_C412375.html" V 800 4400 50  0001 C CNN "LCSC"
+F 5 "0.01388" V 800 4400 50  0001 C CNN "Cost100"
 	1    800  4400
 	0    1    1    0   
 $EndComp
@@ -1013,7 +1012,7 @@ Wire Wire Line
 	700  4950 700  4700
 Connection ~ 700  4950
 $Comp
-L power:+3V8 #PWR0136
+L tensigral_lamp_hardware-rescue:+3V8-power #PWR0136
 U 1 1 5E1322FB
 P 900 4100
 F 0 "#PWR0136" H 900 3950 50  0001 C CNN
@@ -1024,7 +1023,7 @@ F 3 "" H 900 4100 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0138
+L tensigral_lamp_hardware-rescue:GND-power #PWR0138
 U 1 1 5E13F535
 P 1550 7500
 F 0 "#PWR0138" H 1550 7250 50  0001 C CNN
@@ -1035,7 +1034,7 @@ F 3 "" H 1550 7500 50  0001 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L Connector_Generic:Conn_02x03_Odd_Even J3
+L tensigral_lamp_hardware-rescue:Conn_02x03_Odd_Even-Connector_Generic J3
 U 1 1 5E13D9F2
 P 1250 7400
 F 0 "J3" H 1300 7717 50  0000 C CNN
@@ -1074,7 +1073,7 @@ AUX
 Text GLabel 4400 6700 0    50   Input ~ 0
 AUX
 $Comp
-L 5050RGB:CONN_1 P7
+L tensigral_lamp_hardware-rescue:CONN_1-5050RGB P7
 U 1 1 5E237F5E
 P 4550 6700
 F 0 "P7" V 4429 6759 40  0000 L CNN
@@ -1086,7 +1085,7 @@ F 4 "1" V 4550 6700 50  0001 C CNN "NOBOM"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_01x03 J4
+L tensigral_lamp_hardware-rescue:Conn_01x03-Connector_Generic J4
 U 1 1 5E249701
 P 4650 7150
 F 0 "J4" H 4730 7192 50  0000 L CNN
@@ -1098,7 +1097,7 @@ F 4 "1" H 4650 7150 50  0001 C CNN "NOBOM"
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0140
+L tensigral_lamp_hardware-rescue:GND-power #PWR0140
 U 1 1 5E250D19
 P 4450 7250
 F 0 "#PWR0140" H 4450 7000 50  0001 C CNN
@@ -1111,7 +1110,7 @@ $EndComp
 Text GLabel 4450 7050 0    50   Input ~ 0
 VUSB
 $Comp
-L 5050RGB:CONN_1 P8
+L tensigral_lamp_hardware-rescue:CONN_1-5050RGB P8
 U 1 1 5E261D17
 P 4550 6900
 F 0 "P8" V 4429 6959 40  0000 L CNN
@@ -1129,7 +1128,7 @@ Wire Wire Line
 Text GLabel 4900 4900 0    50   Input ~ 0
 AUXU
 $Comp
-L 5050RGB:CONN_1 P9
+L tensigral_lamp_hardware-rescue:CONN_1-5050RGB P9
 U 1 1 5E387AEF
 P 5050 4900
 F 0 "P9" V 4929 4959 40  0000 L CNN
@@ -1141,7 +1140,7 @@ F 4 "1" V 5050 4900 50  0001 C CNN "NOBOM"
 	1    0    0    -1  
 $EndComp
 $Comp
-L 5050RGB:CONN_1 P10
+L tensigral_lamp_hardware-rescue:CONN_1-5050RGB P10
 U 1 1 5E3CE23F
 P 5050 5050
 F 0 "P10" V 4929 5109 40  0000 L CNN
@@ -1155,7 +1154,7 @@ $EndComp
 Text GLabel 4900 5050 0    50   Input ~ 0
 AUXU
 $Comp
-L 5050RGB:AVRISP6 J5
+L tensigral_lamp_hardware-rescue:AVRISP6-5050RGB J5
 U 1 1 5E3D4579
 P 10200 5400
 F 0 "J5" H 10200 5787 60  0000 C CNN
@@ -1178,7 +1177,7 @@ AUXVCC
 Text GLabel 10750 5500 2    50   Input ~ 0
 AUXGND
 $Comp
-L Device:C C16
+L tensigral_lamp_hardware-rescue:C-Device C16
 U 1 1 5E3E7089
 P 9550 6100
 F 0 "C16" H 9665 6146 50  0000 L CNN
@@ -1199,7 +1198,7 @@ ASDA
 Text GLabel 9250 5400 2    50   Input ~ 0
 ASCL
 $Comp
-L Device:R R4
+L tensigral_lamp_hardware-rescue:R-Device R4
 U 1 1 5E431524
 P 10650 4600
 F 0 "R4" H 10580 4554 50  0000 R CNN
@@ -1212,7 +1211,7 @@ F 5 ".00104" H 10650 4600 50  0001 C CNN "Cost100"
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:R R5
+L tensigral_lamp_hardware-rescue:R-Device R5
 U 1 1 5E434511
 P 10650 4700
 F 0 "R5" H 10580 4654 50  0000 R CNN
@@ -1233,7 +1232,7 @@ AUXVCC
 Text GLabel 10500 4700 0    50   Input ~ 0
 AUXVCC
 $Comp
-L Device:R R6
+L tensigral_lamp_hardware-rescue:R-Device R6
 U 1 1 5E453FC4
 P 5300 5900
 F 0 "R6" H 5230 5854 50  0000 R CNN
@@ -1246,7 +1245,7 @@ F 5 ".00104" H 5300 5900 50  0001 C CNN "Cost100"
 	-1   0    0    1   
 $EndComp
 $Comp
-L power:GND #PWR0142
+L tensigral_lamp_hardware-rescue:GND-power #PWR0142
 U 1 1 5E45A99D
 P 5300 6550
 F 0 "#PWR0142" H 5300 6300 50  0001 C CNN
@@ -1257,7 +1256,7 @@ F 3 "" H 5300 6550 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+3V8 #PWR0144
+L tensigral_lamp_hardware-rescue:+3V8-power #PWR0144
 U 1 1 5E462F0C
 P 5300 5750
 F 0 "#PWR0144" H 5300 5600 50  0001 C CNN
@@ -1270,7 +1269,7 @@ $EndComp
 Text GLabel 2400 4050 2    50   Input ~ 0
 ANA_ADC
 $Comp
-L Device:Microphone MK1
+L tensigral_lamp_hardware-rescue:Microphone-Device MK1
 U 1 1 5E47A281
 P 5300 6350
 F 0 "MK1" H 5430 6396 50  0000 L CNN
@@ -1285,7 +1284,7 @@ $EndComp
 Text GLabel 5500 6100 2    50   Input ~ 0
 ANA_ADC
 $Comp
-L kicad:MXC400xXC U4
+L tensigral_lamp_hardware-rescue:MXC400xXC-kicad U4
 U 1 1 5E504F64
 P 7700 6200
 F 0 "U4" H 7700 6525 50  0000 C CNN
@@ -1306,7 +1305,7 @@ AUXVCC
 Text GLabel 7400 6300 0    50   Input ~ 0
 AUXGND
 $Comp
-L Device:C C17
+L tensigral_lamp_hardware-rescue:C-Device C17
 U 1 1 5E508E3A
 P 10100 6100
 F 0 "C17" H 10215 6146 50  0000 L CNN
@@ -1325,7 +1324,7 @@ AUXGND
 NoConn ~ 8000 6300
 NoConn ~ 7400 6200
 $Comp
-L Device:C C9
+L tensigral_lamp_hardware-rescue:C-Device C9
 U 1 1 5E5134BF
 P 4350 5700
 F 0 "C9" H 4465 5746 50  0000 L CNN
@@ -1338,7 +1337,7 @@ F 5 "0.003738" H 4350 5700 50  0001 C CNN "Cost100"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C3
+L tensigral_lamp_hardware-rescue:C-Device C3
 U 1 1 5E532D66
 P 10350 950
 F 0 "C3" H 10465 996 50  0000 L CNN
@@ -1351,7 +1350,7 @@ F 5 "0.003738" H 10350 950 50  0001 C CNN "Cost100"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C4
+L tensigral_lamp_hardware-rescue:C-Device C4
 U 1 1 5E5336DD
 P 10750 950
 F 0 "C4" H 10865 996 50  0000 L CNN
@@ -1364,7 +1363,7 @@ F 5 "0.003738" H 10750 950 50  0001 C CNN "Cost100"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C5
+L tensigral_lamp_hardware-rescue:C-Device C5
 U 1 1 5E533FE9
 P 9550 1850
 F 0 "C5" H 9665 1896 50  0000 L CNN
@@ -1377,7 +1376,7 @@ F 5 "0.003738" H 9550 1850 50  0001 C CNN "Cost100"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C6
+L tensigral_lamp_hardware-rescue:C-Device C6
 U 1 1 5E534B3A
 P 9950 1850
 F 0 "C6" H 10065 1896 50  0000 L CNN
@@ -1390,7 +1389,7 @@ F 5 "0.003738" H 9950 1850 50  0001 C CNN "Cost100"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C7
+L tensigral_lamp_hardware-rescue:C-Device C7
 U 1 1 5E53552C
 P 10350 1850
 F 0 "C7" H 10465 1896 50  0000 L CNN
@@ -1403,7 +1402,7 @@ F 5 "0.003738" H 10350 1850 50  0001 C CNN "Cost100"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C8
+L tensigral_lamp_hardware-rescue:C-Device C8
 U 1 1 5E535EBA
 P 10750 1850
 F 0 "C8" H 10865 1896 50  0000 L CNN
@@ -1416,7 +1415,7 @@ F 5 "0.003738" H 10750 1850 50  0001 C CNN "Cost100"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C14
+L tensigral_lamp_hardware-rescue:C-Device C14
 U 1 1 5E53BD12
 P 3000 7050
 F 0 "C14" H 3115 7096 50  0000 L CNN
@@ -1436,7 +1435,7 @@ Wire Wire Line
 	5300 6100 5300 6050
 Connection ~ 5300 6100
 $Comp
-L 5050RGB:CONN_1 P11
+L tensigral_lamp_hardware-rescue:CONN_1-5050RGB P11
 U 1 1 5E598F1C
 P 7500 5000
 F 0 "P11" V 7379 5059 40  0000 L CNN
@@ -1450,7 +1449,7 @@ $EndComp
 Text GLabel 7350 5000 0    50   Input ~ 0
 AUXEXTRA
 $Comp
-L Device:C C2
+L tensigral_lamp_hardware-rescue:C-Device C2
 U 1 1 5E532390
 P 9950 950
 F 0 "C2" H 10065 996 50  0000 L CNN
@@ -1463,7 +1462,7 @@ F 5 "0.003738" H 9950 950 50  0001 C CNN "Cost100"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C1
+L tensigral_lamp_hardware-rescue:C-Device C1
 U 1 1 5E531279
 P 9550 950
 F 0 "C1" H 9665 996 50  0000 L CNN
@@ -1476,7 +1475,7 @@ F 5 "0.003738" H 9550 950 50  0001 C CNN "Cost100"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Connector_Generic:Conn_02x03_Odd_Even J2
+L tensigral_lamp_hardware-rescue:Conn_02x03_Odd_Even-Connector_Generic J2
 U 1 1 5E0E340D
 P 1250 1050
 F 0 "J2" H 1300 1367 50  0000 C CNN
@@ -1489,7 +1488,7 @@ F 5 "0.024623" H 1250 1050 50  0001 C CNN "Cost100"
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C10
+L tensigral_lamp_hardware-rescue:C-Device C10
 U 1 1 5E047396
 P 2850 1100
 F 0 "C10" H 2965 1146 50  0000 L CNN
@@ -1502,7 +1501,7 @@ F 5 "0.032871" H 2850 1100 50  0001 C CNN "Cost100"
 	1    0    0    -1  
 $EndComp
 $Comp
-L LED:WS2812B D5
+L tensigral_lamp_hardware-rescue:WS2812B-LED D5
 U 1 1 5E0B8A33
 P 5200 1100
 F 0 "D5" H 5544 1146 50  0000 L CNN
@@ -1515,7 +1514,7 @@ F 5 ".112" H 5200 1100 50  0001 C CNN "Cost100"
 	1    0    0    -1  
 $EndComp
 $Comp
-L LED:WS2812B D6
+L tensigral_lamp_hardware-rescue:WS2812B-LED D6
 U 1 1 5E0B95AB
 P 6250 1100
 F 0 "D6" H 6594 1146 50  0000 L CNN
@@ -1528,7 +1527,7 @@ F 5 ".112" H 6250 1100 50  0001 C CNN "Cost100"
 	1    0    0    -1  
 $EndComp
 $Comp
-L LED:WS2812B D7
+L tensigral_lamp_hardware-rescue:WS2812B-LED D7
 U 1 1 5E0BA360
 P 7300 1100
 F 0 "D7" H 7644 1146 50  0000 L CNN
@@ -1541,7 +1540,7 @@ F 5 ".112" H 7300 1100 50  0001 C CNN "Cost100"
 	1    0    0    -1  
 $EndComp
 $Comp
-L LED:WS2812B D8
+L tensigral_lamp_hardware-rescue:WS2812B-LED D8
 U 1 1 5E0BAE96
 P 8350 1100
 F 0 "D8" H 8694 1146 50  0000 L CNN
@@ -1554,7 +1553,7 @@ F 5 ".112" H 8350 1100 50  0001 C CNN "Cost100"
 	1    0    0    -1  
 $EndComp
 $Comp
-L LED:WS2812B D9
+L tensigral_lamp_hardware-rescue:WS2812B-LED D9
 U 1 1 5E0BB9F8
 P 1000 2450
 F 0 "D9" H 1344 2496 50  0000 L CNN
@@ -1567,7 +1566,7 @@ F 5 ".112" H 1000 2450 50  0001 C CNN "Cost100"
 	1    0    0    -1  
 $EndComp
 $Comp
-L LED:WS2812B D10
+L tensigral_lamp_hardware-rescue:WS2812B-LED D10
 U 1 1 5E0BC55B
 P 2050 2450
 F 0 "D10" H 2394 2496 50  0000 L CNN
@@ -1580,7 +1579,7 @@ F 5 ".112" H 2050 2450 50  0001 C CNN "Cost100"
 	1    0    0    -1  
 $EndComp
 $Comp
-L LED:WS2812B D11
+L tensigral_lamp_hardware-rescue:WS2812B-LED D11
 U 1 1 5E0BD0BB
 P 3100 2450
 F 0 "D11" H 3444 2496 50  0000 L CNN
@@ -1593,7 +1592,7 @@ F 5 ".112" H 3100 2450 50  0001 C CNN "Cost100"
 	1    0    0    -1  
 $EndComp
 $Comp
-L LED:WS2812B D12
+L tensigral_lamp_hardware-rescue:WS2812B-LED D12
 U 1 1 5E0BDC9C
 P 4150 2450
 F 0 "D12" H 4494 2496 50  0000 L CNN
@@ -1606,7 +1605,7 @@ F 5 ".112" H 4150 2450 50  0001 C CNN "Cost100"
 	1    0    0    -1  
 $EndComp
 $Comp
-L LED:WS2812B D13
+L tensigral_lamp_hardware-rescue:WS2812B-LED D13
 U 1 1 5E0BE887
 P 5200 2450
 F 0 "D13" H 5544 2496 50  0000 L CNN
@@ -1619,7 +1618,7 @@ F 5 ".112" H 5200 2450 50  0001 C CNN "Cost100"
 	1    0    0    -1  
 $EndComp
 $Comp
-L LED:WS2812B D14
+L tensigral_lamp_hardware-rescue:WS2812B-LED D14
 U 1 1 5E0BF375
 P 6250 2450
 F 0 "D14" H 6594 2496 50  0000 L CNN
@@ -1632,7 +1631,7 @@ F 5 ".112" H 6250 2450 50  0001 C CNN "Cost100"
 	1    0    0    -1  
 $EndComp
 $Comp
-L LED:WS2812B D15
+L tensigral_lamp_hardware-rescue:WS2812B-LED D15
 U 1 1 5E0C0077
 P 7300 2450
 F 0 "D15" H 7644 2496 50  0000 L CNN
@@ -1645,7 +1644,7 @@ F 5 ".112" H 7300 2450 50  0001 C CNN "Cost100"
 	1    0    0    -1  
 $EndComp
 $Comp
-L LED:WS2812B D16
+L tensigral_lamp_hardware-rescue:WS2812B-LED D16
 U 1 1 5E0C0C5B
 P 8350 2450
 F 0 "D16" H 8694 2496 50  0000 L CNN
@@ -1658,7 +1657,7 @@ F 5 ".112" H 8350 2450 50  0001 C CNN "Cost100"
 	1    0    0    -1  
 $EndComp
 $Comp
-L LED:WS2812B D17
+L tensigral_lamp_hardware-rescue:WS2812B-LED D17
 U 1 1 5E0C1839
 P 3850 3600
 F 0 "D17" H 4194 3646 50  0000 L CNN
@@ -1671,7 +1670,7 @@ F 5 ".112" H 3850 3600 50  0001 C CNN "Cost100"
 	1    0    0    -1  
 $EndComp
 $Comp
-L LED:WS2812B D18
+L tensigral_lamp_hardware-rescue:WS2812B-LED D18
 U 1 1 5E0C2692
 P 4900 3600
 F 0 "D18" H 5244 3646 50  0000 L CNN
@@ -1684,7 +1683,7 @@ F 5 ".112" H 4900 3600 50  0001 C CNN "Cost100"
 	1    0    0    -1  
 $EndComp
 $Comp
-L LED:WS2812B D19
+L tensigral_lamp_hardware-rescue:WS2812B-LED D19
 U 1 1 5E0C3252
 P 5950 3600
 F 0 "D19" H 6294 3646 50  0000 L CNN
@@ -1697,7 +1696,7 @@ F 5 ".112" H 5950 3600 50  0001 C CNN "Cost100"
 	1    0    0    -1  
 $EndComp
 $Comp
-L LED:WS2812B D20
+L tensigral_lamp_hardware-rescue:WS2812B-LED D20
 U 1 1 5E0C3EBA
 P 7000 3600
 F 0 "D20" H 7344 3646 50  0000 L CNN
@@ -1710,7 +1709,7 @@ F 5 ".112" H 7000 3600 50  0001 C CNN "Cost100"
 	1    0    0    -1  
 $EndComp
 $Comp
-L LED:WS2812B D1
+L tensigral_lamp_hardware-rescue:WS2812B-LED D1
 U 1 1 5E0C69A6
 P 8000 3600
 F 0 "D1" H 8344 3646 50  0000 L CNN
@@ -1723,7 +1722,7 @@ F 5 ".112" H 8000 3600 50  0001 C CNN "Cost100"
 	1    0    0    -1  
 $EndComp
 $Comp
-L LED:WS2812B D2
+L tensigral_lamp_hardware-rescue:WS2812B-LED D2
 U 1 1 5E0CA1BA
 P 9050 3600
 F 0 "D2" H 9394 3646 50  0000 L CNN
@@ -1763,7 +1762,7 @@ AUXGND
 Text GLabel 8650 4700 1    50   Input ~ 0
 AUXVCC
 $Comp
-L MCU_Microchip_ATtiny:ATtiny85-20SU U3
+L tensigral_lamp_hardware-rescue:ATtiny85-20SU-MCU_Microchip_ATtiny U3
 U 1 1 5E384137
 P 8650 5300
 F 0 "U3" H 8121 5346 50  0000 R CNN
@@ -1776,7 +1775,7 @@ F 5 ".837879" H 8650 5300 50  0001 C CNN "Cost100"
 	1    0    0    -1  
 $EndComp
 $Comp
-L LED:WS2812B D3
+L tensigral_lamp_hardware-rescue:WS2812B-LED D3
 U 1 1 5E0CAC55
 P 10100 3600
 F 0 "D3" H 10444 3646 50  0000 L CNN
