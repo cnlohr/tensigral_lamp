@@ -6,7 +6,8 @@
 #define TAU (6.2831853)
 #define ETCH "stroke=\"#ff0000\" fill=\"none\" stroke-width=\".05mm\""
 #define CUT  "stroke=\"#0000ff\" fill=\"none\" stroke-width=\".05mm\""
-#define MATERIAL_THICKNESS 1.6
+#define MATERIAL_THICKNESS 5.5
+//1.6
 #define SWIRVINESS 10.0
 #define LOUPES 5
 #define SUPPORTSY 1.2
@@ -45,9 +46,9 @@ void Normal2d( float * out, float * in ) { out[0] = -in[1]; out[1] = in[0]; }
 
 int main()
 {
-	float width = 100;
-	float height = 100;
-	float centerx = width/2+1;
+	float width = 103;
+	float height = 102;
+	float centerx = width/2+2;
 	float centery = height/2-3;
 	StartSVG( width, height );
 	
@@ -60,7 +61,7 @@ int main()
 		float rotates[2] = { -1.1, 2.35 };
 		for(k = 0; k < 2; k++ )
 		{
-			float cx = centerx+(k?-17:-21);
+			float cx = centerx+(k?-17:-24);
 			float cy = centery+(k?-4:-3.5);
 			float kpx = cx*cos(rotates[k]) + cy*sin(rotates[k]);
 			float kpy =-cx*sin(rotates[k]) + cy*cos(rotates[k]);
@@ -178,7 +179,7 @@ int main()
 	}
 
 	//The main body
-	for( k = 1; k < 4; k++ )
+	for( k = 1; k < 4; k+=2 )
 	{
 		int i;
 		float r = rs[k];
