@@ -1,0 +1,21 @@
+LIBRARY hidtest.exe
+
+EXPORTS
+hid_close
+hid_enumerate
+hid_error
+hid_exit
+hid_free_enumeration
+hid_get_feature_report
+hid_get_indexed_string
+hid_get_manufacturer_string
+hid_get_product_string
+hid_get_serial_number_string
+hid_init
+hid_open
+hid_open_path
+hid_read
+hid_read_timeout
+hid_send_feature_report
+hid_set_nonblocking
+hid_write
