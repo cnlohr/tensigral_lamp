@@ -5,6 +5,7 @@
 #include <usb.h>
 #include <usbconfig.h>
 #include <adc.h>
+#include "touch.h"
 #include <string.h>
 #include <ws2812.h>
 
@@ -105,11 +106,11 @@ int main()
 	send_text_value( "SWS:",RCC->CFGR & RCC_CFGR_SWS);
 #endif
 
-//	send_text( "\n" );
-//	send_text( "Online\n" );
 	ConfigureGPIO( 0x05, INOUT_OUT );	//Also do this first to enable port A.
+	init_touch();
 
 	setup_adcs();
+
 	initialize_adc_start();
 	InitWSDMA();
 
@@ -122,20 +123,15 @@ int main()
 
 	TriggerDMA();
 
-#if 0
-	do
-	{
-		GPIOOn( 0x05 );
-		GPIOOff( 0x05 );
-		GPIOOn( 0x05 );
-		GPIOOff( 0x05 );
-		//send_text_value( "USB:", USBR->FNR );
-	}
-	while(1);
-#endif
+	uint8_t counts[3];
 
 	while(1)
 	{
+	//	GPIOLatch( 0x00 ) &= ~(1<<6);
+		//GPIOOn( 0x06 );
+
+		//GPIOOff( 0x06 );
+
 		if( usbDataOkToRead )
 		{
 			CBHIDInterruptIn( 64, usb_get_out_ep_buffer() );
@@ -149,17 +145,17 @@ int main()
 				senddata[4+i*2+0] = ADCs[i] & 0xff;
 				senddata[4+i*2+1] = (ADCs[i] >> 8) & 0xff;
 			}
-			//*(uint16_t*)(&senddata[4]) = ADCs[0];
-			//*(uint16_t*)(&senddata[6]) = ADCs[1];
-			//*(uint16_t*)(&senddata[8]) = ADCs[2];
 
 			senddata[0] = adcreads>>8;
 			senddata[1] = adcreads;
 			senddata[2]++;
+			senddata[20] = counts[0];
+			senddata[21] = counts[1];
+			senddata[22] = counts[2];
 			usb_data( senddata, ENDPOINT1_SIZE );
 			initialize_adc_start();
 
-//			send_text_value( "   ", usbirqlast );
+			run_touch( counts );
 		}
 		//GPIOOn( 0x05 );
 		//GPIOOff( 0x05 );

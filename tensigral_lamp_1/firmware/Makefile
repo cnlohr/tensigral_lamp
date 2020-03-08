@@ -40,6 +40,7 @@ SRC = main.c \
 	systems.c \
 	lib/system_stm32f0xx.c \
 	usb.c \
+	touch.c \
 	adc.c \
 	ws2812.c \
 	STM32F0xx_StdPeriph_Driver/src/stm32f0xx_rcc.c \

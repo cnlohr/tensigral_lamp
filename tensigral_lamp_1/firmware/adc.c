@@ -29,11 +29,6 @@ void setup_adcs()
 {
 	//int i;
 
-	//First set up ADMUXing for the external muxers.
-	ConfigureGPIO( GPIO_FROM_NUMS( 0, 6 ), INOUT_OUT );
-	GPIOOf(0)->BRR = 0x3c0; //Reset all mux's..
-
-
 	//From http://hung2492.blogspot.com/2015/02/lesson-5-adcdac-stm32f0.html
 
 	GPIO_InitTypeDef GPIO_InitStructure;
@@ -50,7 +45,7 @@ void setup_adcs()
 	RCC_AHBPeriphClockCmd(RCC_AHBPeriph_GPIOA, ENABLE);
 	RCC_AHBPeriphClockCmd(RCC_AHBPeriph_GPIOB, ENABLE);
 
-	GPIO_InitStructure.GPIO_Pin = 0x3f; //PA0..5
+	GPIO_InitStructure.GPIO_Pin = 1<<2; //PA2
 	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AN;
 	GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_NOPULL ;
 	GPIO_Init(GPIOA, &GPIO_InitStructure);

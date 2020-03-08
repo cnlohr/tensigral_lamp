@@ -93,8 +93,12 @@ void * rxthread( void * v )
 		printf( "." ); fflush( stdout );
 #endif
 
-//		for( i = 0; i < 64; i++ ) printf( "%02x", RXbuf[i] ); printf( "\n" );
-//		printf( "%03d:%03d [", reads-lastreads, RXbuf[2] );
+		for( i = 0; i < 64; i++ ) printf( "%02x", RXbuf[i] ); printf( "\n" );
+			printf( "%03d:%03d [", reads-lastreads, RXbuf[2] );
+
+		temperature = RXbuf[4] | (RXbuf[5]<<8);
+		adc = RXbuf[6] | (RXbuf[7]<<8);
+		voltage = RXbuf[8] | (RXbuf[9]<<8);
 /*		for( i = 0; i < 38/2; i++ )
 		{
 			uint8_t marker = i * 3 + 4;
@@ -164,10 +168,11 @@ void * txthread( void * v )
 
 			if( byrem == 0 ) sendbuf[1] |= 0x80;
 			int tsend = 65; //Size of payload (must be 64+1 always)
-		//	res = hid_send_feature_report( handle, sendbuf, tsend);
 
-			res = hid_write(handle, sendbuf+1, 64);
-			printf( "RES: %d\n", res );
+
+		//	res = hid_send_feature_report( handle, sendbuf, tsend);	//Method 1 control transfer (janky on STM32F0)
+			res = hid_write(handle, sendbuf+1, tsend = 64 );
+			//printf( "RES: %d\n", res );
 
 			usleep(1000);
 			if( res != tsend ) TXFaults++;
@@ -221,6 +226,12 @@ int main()
 		CNFGClearFrame();
 		CNFGColor( 0xFFFFFF );
 		CNFGGetDimensions( &screenx, &screeny );
+
+		int t;
+		for( t = 0; t < 3; t++ )
+		{
+			CNFGTackSegment( t * 20, RXbuf[20+t] * 10 + 30, (t+1)*20, RXbuf[20+t] * 10 + 30 );
+		}
 
 		for( y = 0; y <= 1; y++ )
 		for( x = 0; x <= 1; x++ )
