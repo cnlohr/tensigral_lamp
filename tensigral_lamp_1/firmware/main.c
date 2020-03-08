@@ -51,8 +51,26 @@ volatile int do_trigger_leds = 0;
 
 void CBHIDData( uint8_t paklen, uint8_t * data )
 {
+#if 0
 	//Byte 1 = MSB = Launch when done. --- LSBs = length of this packet in LEDs
 	//Byte 2 = Offset, LEDs
+
+	UpdateLEDs( data[1], &data[2], data[0] & 0x7f );
+//	send_text_value( "TV:", data[1] );
+	if( data[0] & 0x80 )
+	{
+		TriggerDMA();
+	}
+#endif
+//Seems unreliable.
+}
+
+void CBHIDInterruptIn( uint8_t paklen, uint8_t * data )
+{
+	//Byte 1 = MSB = Launch when done. --- LSBs = length of this packet in LEDs
+	//Byte 2 = Offset, LEDs
+
+//	send_text_value( "SVD: ", data[0] );
 
 	UpdateLEDs( data[1], &data[2], data[0] & 0x7f );
 //	send_text_value( "TV:", data[1] );
@@ -99,8 +117,9 @@ int main()
 
 	for( i = 0; i < 20; i++ )
 	{
-		UpdateLEDs( i, "\x60\x00\x80\xff", 1 );
+		UpdateLEDs( i, (uint8_t*)"\x60\x00\x80\xff", 1 );
 	}
+
 	TriggerDMA();
 
 #if 0
@@ -117,16 +136,22 @@ int main()
 
 	while(1)
 	{
-
+		if( usbDataOkToRead )
+		{
+			CBHIDInterruptIn( 64, usb_get_out_ep_buffer() );
+			usb_release_out_ep_buffer();
+			usbDataOkToRead = 0;
+		}
 		if( usbDataOkToSend && adc_done )
 		{
-			//for( i = 0; i < 15; i++ )
-			//{
-			//	((uint32_t*)senddata)[i+1] = ((uint32_t*)ADCs)[i];
-			//}
-			*(uint16_t*)(&senddata[4]) = ADCs[0];
-			*(uint16_t*)(&senddata[6]) = ADCs[1];
-			*(uint16_t*)(&senddata[8]) = ADCs[2];
+			for( i = 0; i < 3; i++ )
+			{
+				senddata[4+i*2+0] = ADCs[i] & 0xff;
+				senddata[4+i*2+1] = (ADCs[i] >> 8) & 0xff;
+			}
+			//*(uint16_t*)(&senddata[4]) = ADCs[0];
+			//*(uint16_t*)(&senddata[6]) = ADCs[1];
+			//*(uint16_t*)(&senddata[8]) = ADCs[2];
 
 			senddata[0] = adcreads>>8;
 			senddata[1] = adcreads;

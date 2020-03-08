@@ -5094,6 +5094,9 @@ typedef struct
   * @}
   */
 
+//Add assert param
+void assert_param( int x );
+
 #ifdef __cplusplus
 }
 #endif
@@ -5109,3 +5112,4 @@ typedef struct
   */
 
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
+

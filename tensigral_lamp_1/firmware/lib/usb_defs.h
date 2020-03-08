@@ -279,13 +279,13 @@ struct USBSetupHeader {
 	uint16_t wValue;
 	uint16_t wIndex;
 	uint16_t wLength;
-};
+} __attribute__((packed));
 
 
 struct UsbBufferDescriptionTableEntry {
     volatile uint16_t addr;
     volatile uint16_t count;
-};
+} __attribute__((packed));
 
 #define UBgetCount( c ) ( c.count & 0x3ff )
 

@@ -14,15 +14,17 @@ OBJCOPYFLAGS = -O binary
 
 BIN=$(CP) -O ihex 
 
-DEFS = -DSTM32F042 -fshort-wchar
-DEFS := $(DEFS) -DDEBUG
+DEFS = -DSTM32F042
+#DEFS := $(DEFS) -DDEBUG
 
 MCU = cortex-m0
-MCFLAGS = -mcpu=$(MCU) -mthumb -mlittle-endian -mthumb-interwork
+MCFLAGS = -mcpu=$(MCU) 
+
+# -mthumb -mlittle-endian -mthumb-interwork
 
 STM32_INCLUDES = -Ilib -I. -ISTM32F0xx_StdPeriph_Driver/inc
 
-OPTIMIZE       =  -Ofast  -flto -ffunction-sections -fdata-sections  -Wl,--relax 
+OPTIMIZE  =  -O2 -Wall # -flto -ffunction-sections -fdata-sections  -Wl,--relax 
 
 CFLAGS	= $(MCFLAGS)  $(OPTIMIZE)  $(DEFS) \
 	-I. \

@@ -2,11 +2,14 @@
 #define _USB_CONFIG_H
 
 #include <lib/usb_defs.h>
-#include <wchar.h>
+//#include <wchar.h>
 
 // You can change these to give your code its own name.
-#define STR_MANUFACTURER	L"DemoMfg"
-#define STR_PRODUCT		L"DemoProduct"
+#define STR_MANUFACTURER	{ 'm', 0, 'f', 0, 'g', 0 }
+#define STR_PRODUCT		    { 'p', 0, 'r', 0, 'd', 0 }
+#define STR_PRODUCT_LEN (6+1)
+#define STR_MANUFACTURER_LEN (6+1)
+
 #define VENDOR_ID		0xabcd
 #define PRODUCT_ID		0xf410
 
@@ -14,7 +17,7 @@
 
 #define ENDPOINT0_SIZE CONTROL_MAX_PACKET_SIZE
 #define ENDPOINT1_SIZE 64
-//#define ENDPOINT2_SIZE 64
+#define ENDPOINT2_SIZE 64
 
 
 #define LSB(x) ((x)&0xff)
@@ -59,7 +62,7 @@ const static uint8_t device_descriptor[] = {
 	1					// bNumConfigurations
 };
 
-#define CONFIG_DESCRIPTOR_SIZE (9+9+9+7) //+7)
+#define CONFIG_DESCRIPTOR_SIZE (9+9+9+7+7)
 #define HID_DESC_OFFSET (9+9)
 
 const static uint8_t config_descriptor[CONFIG_DESCRIPTOR_SIZE] = {
@@ -78,7 +81,7 @@ const static uint8_t config_descriptor[CONFIG_DESCRIPTOR_SIZE] = {
 	4,					// bDescriptorType
 	HARDWARE_INTERFACE,	// bInterfaceNumber (unused, would normally be used for HID)
 	0,					// bAlternateSetting
-	1,					// bNumEndpoints
+	2,					// bNumEndpoints
 	3,					// bInterfaceClass 
 	0xff,				// bInterfaceSubClass (Was 0xff) 1 = Boot device subclass.
 	0xff,				// bInterfaceProtocol (Was 0xff) 1 = keyboard, 2 = mouse.
@@ -102,15 +105,13 @@ const static uint8_t config_descriptor[CONFIG_DESCRIPTOR_SIZE] = {
 	LSB(ENDPOINT1_SIZE), MSB(ENDPOINT1_SIZE),			// wMaxPacketSize
 	1,					// bInterval */
 
-/*
+
 	7,					// bLength
 	5,					// bDescriptorType
 	OUT_ENDPOINT_ADDRESS,					// bEndpointAddress (OUT, 2)
 	0x03,				// bmAttributes (Interrupt)
 	LSB(ENDPOINT2_SIZE), MSB(ENDPOINT2_SIZE),			// wMaxPacketSize
 	1,					// bInterval 
-
-*/
 };
 
 
@@ -121,29 +122,31 @@ const static uint8_t config_descriptor[CONFIG_DESCRIPTOR_SIZE] = {
 struct usb_string_descriptor_struct {
 	uint8_t bLength;
 	uint8_t bDescriptorType;
-	wchar_t wString[];
+	uint8_t wString[];
 };
+
+
 static const struct usb_string_descriptor_struct string0 = {
 	4,
 	3,
 	//L"\x0409"
-	{ 0x0409, 0x0000 }
+	{ 0x09, 0x04, 0x00, 0x00 }
 };
 static const struct usb_string_descriptor_struct string1 = {
-	sizeof(STR_MANUFACTURER),
+	STR_MANUFACTURER_LEN,
 	3,
 	STR_MANUFACTURER
 };
 
 static const struct usb_string_descriptor_struct string2 = {
-	sizeof(STR_PRODUCT),
+	STR_PRODUCT_LEN,
 	3,
 	STR_PRODUCT
 };
 static struct usb_string_descriptor_struct string3 = {
 	16,
 	3,
-	{ 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x005f, 0x0000 }  //This will be filled in with the UID on boot.
+	{ 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x5f, 0x00, 0x00, 0x00 }  //This will be filled in with the UID on boot.
 };
 
 
@@ -160,8 +163,8 @@ const static struct descriptor_list_struct {
 	{0x2200, HARDWARE_INTERFACE, hid_report_desc, sizeof(hid_report_desc)},
 	{0x2100, HARDWARE_INTERFACE, config_descriptor+HID_DESC_OFFSET, 9},
 	{0x0300, 0x0000, (const uint8_t *)&string0, 4},
-	{0x0301, 0x0409, (const uint8_t *)&string1, sizeof(STR_MANUFACTURER)},
-	{0x0302, 0x0409, (const uint8_t *)&string2, sizeof(STR_PRODUCT)},	
+	{0x0301, 0x0409, (const uint8_t *)&string1, STR_MANUFACTURER_LEN},
+	{0x0302, 0x0409, (const uint8_t *)&string2, STR_PRODUCT_LEN},	
 	{0x0303, 0x0409, (const uint8_t *)&string3, 16}
 };
 #define NUM_DESC_LIST (sizeof(descriptor_list)/sizeof(struct descriptor_list_struct))

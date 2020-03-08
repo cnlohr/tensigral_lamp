@@ -152,7 +152,7 @@ void * txthread( void * v )
 		for( i = 0; i < 2; i++ )
 		{
 			uint8_t sendbuf[65];
-			sendbuf[0] = 0;
+			sendbuf[0] = 0x00;
 			sendbuf[1] = (byrem > 60)?15:(byrem/4);
 			sendbuf[2] = offset;
 
@@ -164,8 +164,12 @@ void * txthread( void * v )
 
 			if( byrem == 0 ) sendbuf[1] |= 0x80;
 			int tsend = 65; //Size of payload (must be 64+1 always)
-			res = hid_send_feature_report( handle, sendbuf, tsend);
-			//usleep(100000);
+		//	res = hid_send_feature_report( handle, sendbuf, tsend);
+
+			res = hid_write(handle, sendbuf+1, 64);
+			printf( "RES: %d\n", res );
+
+			usleep(1000);
 			if( res != tsend ) TXFaults++;
 		}
 

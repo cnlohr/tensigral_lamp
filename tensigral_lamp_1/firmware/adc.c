@@ -20,14 +20,14 @@
 volatile uint16_t adcreads = 0;
 volatile static int adcstate = 0;
 volatile uint8_t adc_done = 0;
-volatile uint8_t ADCs[4];
+volatile uint16_t ADCs[4];
 
 
 #define ADCCHANS 3 //Base, 3.6v and Temp.
 
 void setup_adcs()
 {
-	int i;
+	//int i;
 
 	//First set up ADMUXing for the external muxers.
 	ConfigureGPIO( GPIO_FROM_NUMS( 0, 6 ), INOUT_OUT );
@@ -129,9 +129,9 @@ void __attribute__ ((interrupt("IRQ"))) ADC1_IRQHandler(void)
 		ADC_ClearFlag( ADC1, ADC_IT_EOSEQ );
 		adcreads++;
 
-		uint8_t gotval = adcstate-1;
+		//uint8_t gotval = adcstate-1;
 		uint16_t val = ADC1->DR; //ADC_GetConversionValue(ADC1);
-		uint8_t triple = (gotval>>1) * 3;
+		//uint8_t triple = (gotval>>1) * 3;
 
 		//XXX Tricky: Get temperature state
 		if( adcstate == ADCCHANS )

@@ -9,7 +9,7 @@ int initialize_adc_start();
 
 extern volatile uint16_t adcreads;
 extern volatile uint8_t adc_done;
-extern volatile uint8_t ADCs[4];
+extern volatile uint16_t ADCs[4];
 
 #endif
 
