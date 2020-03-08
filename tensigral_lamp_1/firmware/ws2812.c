@@ -4,7 +4,7 @@
 
 //based off of https://github.com/fduignan/NucleoF042_DMAandSPItoWS2812Bs/blob/master/spi.c
 
-uint32_t rawwsdata[WSLEDS*3+2]; //Two 0's.
+uint32_t rawwsdata[WSLEDS*4+8];
 
 void InitWSDMA()
 {
@@ -18,19 +18,23 @@ void InitWSDMA()
     RCC->APB2ENR |= _BV(12);
 
     // Turn on PORT B
-	RCC->AHBENR |= _BV(18);
+//	RCC->AHBENR |= _BV(18);
 
-	ConfigureGPIO( GPIO_FROM_NUMS( 1, 5 ), 0b11 );  //Just for the sake of testing/setting the port up.
+	ConfigureGPIO( GPIO_FROM_NUMS( 0, 7 ), 0b11 );  //Just for the sake of testing/setting the port up.
 
-	for( i = 0; i < WSLEDS*3+2; i++ )
+	for( i = 0; i < WSLEDS*4+8; i++ )
 	{
 		rawwsdata[i] = 0;
 	}
 
     // Configure the pins
-    GPIOB->MODER |= _BV(11);  //GPIO5 AF
-    GPIOB->MODER &= ~_BV(10);
-	GPIOB->AFR[0] &= ~(_BV(20) | _BV(21) | _BV(22) | _BV(23)); //Set AFMode 0.
+//    GPIOB->MODER |= _BV(11);  //GPIO B5 AF
+//    GPIOB->MODER &= ~_BV(10);
+//	GPIOB->AFR[0] &= ~(_BV(20) | _BV(21) | _BV(22) | _BV(23)); //Set AFMode 0.
+
+    GPIOA->MODER |= _BV(15);  //GPIO A7 AF
+    GPIOA->MODER &= ~_BV(14);
+	GPIOA->AFR[0] &= ~(_BV(28) | _BV(29) | _BV(30) | _BV(31)); //Set AFMode 0.
 
 	SPI1->CR1 = SPI1->CR2 = 0;
 
@@ -77,9 +81,9 @@ void UpdateLEDs( int ledstart, uint8_t * leddata, int lengthleds )
 
 	static const uint16_t CodeData[4*4] = { 
 		0x8888, 0x8e88, 0xe888, 0xee88,
-		0x888e, 0x8e8e, 0x8ee8, 0xee8e,
+		0x888e, 0x8e8e, 0xe88e, 0xee8e,
 		0x88e8, 0x8ee8, 0xe8e8, 0xeee8,
-		0x88ee, 0xe8ee, 0x8eee, 0xeeee
+		0x88ee, 0x8eee, 0xe8ee, 0xeeee
 	};
 
 	if( ledstart + lengthleds > WSLEDS )
@@ -87,14 +91,15 @@ void UpdateLEDs( int ledstart, uint8_t * leddata, int lengthleds )
 		lengthleds = WSLEDS - ledstart;
 	}
 
-	int inmark = ledstart * 3;
-	int bytes = lengthleds * 3;
+	int inmark = ledstart * 4;
+	int bytes = lengthleds * 4;
 	int i;
 	for( i = 0; i < bytes; i++ )
 	{
 		int8_t color = leddata[i];
 		//Word-on-wire order:  (Determined experiomentally)
 		//LSByte first. MSBit first.
+		if( i + inmark >= WSLEDS*4 ) break;
 		rawwsdata[i+inmark] = CodeData[(color>>4)&0xf] | (CodeData[(color)&0xf]<<16);
 	}
 }

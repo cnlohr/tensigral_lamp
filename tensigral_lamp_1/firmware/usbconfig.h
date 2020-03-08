@@ -5,10 +5,10 @@
 #include <wchar.h>
 
 // You can change these to give your code its own name.
-#define STR_MANUFACTURER	L"TEST"
-#define STR_PRODUCT		L"TensigralLamp"
+#define STR_MANUFACTURER	L"DemoMfg"
+#define STR_PRODUCT		L"DemoProduct"
 #define VENDOR_ID		0xabcd
-#define PRODUCT_ID		0xf123
+#define PRODUCT_ID		0xf410
 
 #define HARDWARE_INTERFACE 0
 
@@ -28,13 +28,13 @@ const static uint8_t hid_report_desc[] = {
         0x75, 0x08,                             // report size = 8 bits (global)
         0x15, 0x00,                             // logical minimum = 0 (global)
         0x26, 0xFF, 0x00,                       // logical maximum = 255 (global)
-        0x95, 64,                    // report count (global) INPUT REPORT SIZE  (256 peak)
+        0x95, 64,                               // report count (global) 64 bytes.
         0x09, 0x75,                             // usage (local)
         0x81, 0x02,                             // Input
-        0x95, 64,                    // report count (global) INPUT REPORT SIZE
+        0x95, 64,                               // report count (global) INPUT REPORT SIZE
         0x09, 0x76,                             // usage (local)
         0x91, 0x02,                             // Output
-        0x95, 64,            // report count (global)  OUTPUT REPORT SIZE [64]  (0x96, 0x00, 0x02,=512)
+        0x95, 64,            	                // report count (global)  OUTPUT REPORT SIZE [64]  (0x96, 0x00, 0x02,=512)
         0x09, 0x76,                             // usage (local)
         0xB1, 0x02,                             // Feature
         0xC0                                    // end collection
@@ -45,7 +45,7 @@ const static uint8_t hid_report_desc[] = {
 const static uint8_t device_descriptor[] = {
 	18,					// bLength
 	1,					// bDescriptorType
-	0x10, 0x01,				// bcdUSB
+	0x10, 0x01,			// bcdUSB
 	0,					// bDeviceClass
 	0,					// bDeviceSubClass
 	0,					// bDeviceProtocol
@@ -59,10 +59,10 @@ const static uint8_t device_descriptor[] = {
 	1					// bNumConfigurations
 };
 
-#define CONFIG_DESCRIPTOR_SIZE (9+9+9+7+7)
+#define CONFIG_DESCRIPTOR_SIZE (9+9+9+7) //+7)
 #define HID_DESC_OFFSET (9+9)
 
-const static uint8_t config_descriptor[] = {
+const static uint8_t config_descriptor[CONFIG_DESCRIPTOR_SIZE] = {
 	// configuration descriptor, USB spec 9.6.3, page 264-266, Table 9-10
 	9, 					// bLength;
 	2,					// bDescriptorType;
@@ -71,8 +71,8 @@ const static uint8_t config_descriptor[] = {
 	1,					// bNumInterfaces
 	1,					// bConfigurationValue
 	0,					// iConfiguration
-	0xC0,				// bmAttributes
-	0,					// bMaxPower
+	0x80,				// bmAttributes (0xC0 is self-powered)
+	20,					// bMaxPower
 
 	9,					// bLength
 	4,					// bDescriptorType
@@ -80,8 +80,8 @@ const static uint8_t config_descriptor[] = {
 	0,					// bAlternateSetting
 	1,					// bNumEndpoints
 	3,					// bInterfaceClass 
-	0,					// bInterfaceSubClass (Was 0xff) 1 = Boot device subclass.
-	0,					// bInterfaceProtocol (Was 0xff) 1 = keyboard, 2 = mouse.
+	0xff,				// bInterfaceSubClass (Was 0xff) 1 = Boot device subclass.
+	0xff,				// bInterfaceProtocol (Was 0xff) 1 = keyboard, 2 = mouse.
 	0,					// iInterface
 
 
@@ -126,7 +126,8 @@ struct usb_string_descriptor_struct {
 static const struct usb_string_descriptor_struct string0 = {
 	4,
 	3,
-	{0x0409 }
+	//L"\x0409"
+	{ 0x0409, 0x0000 }
 };
 static const struct usb_string_descriptor_struct string1 = {
 	sizeof(STR_MANUFACTURER),
@@ -142,7 +143,7 @@ static const struct usb_string_descriptor_struct string2 = {
 static struct usb_string_descriptor_struct string3 = {
 	16,
 	3,
-	{ 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x005f }  //This will be filled in with the UID on boot.
+	{ 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x0000, 0x005f, 0x0000 }  //This will be filled in with the UID on boot.
 };
 
 

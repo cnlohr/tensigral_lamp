@@ -18,10 +18,13 @@ hid_device *handle = NULL;
 short screenx, screeny;
 int RXHz;
 int TXHz;
-short ADCs[38];
+short voltage;
+short temperature;
+short adc;
+//short ADCs[38];
 uint8_t Colorbuf[2048];
-int colormode[9];
-double colormodechangetime[9];
+int colormode;
+double colormodechangetime;
 
 unsigned char RXbuf[65];
 int RXdeltaReads;
@@ -36,13 +39,15 @@ void HandleKey( int keycode, int bDown ) {
 	if( keycode >= '1' && keycode <= '9' )
 	{
 		int code = keycode - '1';
-		colormode[code] = !colormode[code];
-		colormodechangetime[code] = OGGetAbsoluteTime();
+		colormode = !colormode;
+		colormodechangetime = OGGetAbsoluteTime();
 	}
 }
 
+int lastx, lasty;
+
 void HandleButton( int x, int y, int button, int bDown ) { }
-void HandleMotion( int x, int y, int mask ) { }
+void HandleMotion( int x, int y, int mask ) { lastx = x; lasty = y; }
 void HandleDestroy() { }
 
 
@@ -90,7 +95,7 @@ void * rxthread( void * v )
 
 //		for( i = 0; i < 64; i++ ) printf( "%02x", RXbuf[i] ); printf( "\n" );
 //		printf( "%03d:%03d [", reads-lastreads, RXbuf[2] );
-		for( i = 0; i < 38/2; i++ )
+/*		for( i = 0; i < 38/2; i++ )
 		{
 			uint8_t marker = i * 3 + 4;
 			uint16_t val1 = (((uint16_t)RXbuf[marker])<<4) | (RXbuf[marker+1]>>4);
@@ -98,6 +103,7 @@ void * rxthread( void * v )
 			ADCs[i*2+0] = val1;
 			ADCs[i*2+1] = val2;
 		}
+*/
 //		printf( "]\n" );
 
 		RXTotal++;
@@ -114,44 +120,55 @@ void * txthread( void * v )
 	while(1)
 	{
 		//This whole section does cool stuff with LEDs
-		int allledbytes = 216*3;
-		for( i = 0; i < allledbytes; i+=3 )
+		int allledbytes = 20*4;
+		for( i = 0; i < allledbytes; i+=4 )
 		{
 			uint32_t rk;
 
-			switch( colormode[i/72] )
-			{
-			default: rk = HSVtoHEX( i * 0.01+ frame* .01, 1.0, 1.0 ); break;
-			case 0:  rk = HSVtoHEX( 0, 0.0, 1.0 + colormodechangetime[i/72] - OGGetAbsoluteTime() ); break;
-			}
+			//switch( colormode )
+		//	{
+		//	default: rk = HSVtoHEX( i * 0.01+ frame* .01, 1.0, 1.0 ); break;
+		//	case 0:  rk = HSVtoHEX( 0, 0.0, 1.0 + colormodechangetime - OGGetAbsoluteTime() ); break;
+		//	}
+
+			float sat = OGGetAbsoluteTime() - colormodechangetime;
+
+			rk = HSVtoHEX( i * 0.012+ frame* .01, (sat<1)?sat:1, 1.0 );
+
+			int white = (int)((1.-sat) * 255);
+			if( white > 255 ) white = 255;
+			if( white < 0 ) white = 0;
 
 			Colorbuf[i+0] = rk>>8;
 			Colorbuf[i+1] = rk;
 			Colorbuf[i+2] = rk>>16;
+			Colorbuf[i+3] = white;
 		}
+			//96..111 = brighter.
 
 		//This section does the crazy wacky stuff to actually split the LEDs into HID Packets and get them out the door... Carefully.
 		int byrem = allledbytes;
 		int offset = 0;
-		for( i = 0; i < 11; i++ )
+		for( i = 0; i < 2; i++ )
 		{
 			uint8_t sendbuf[65];
 			sendbuf[0] = 0;
-			sendbuf[1] = (byrem > 60)?20:(byrem/3);
+			sendbuf[1] = (byrem > 60)?15:(byrem/4);
 			sendbuf[2] = offset;
 
-			memcpy( sendbuf + 3, Colorbuf + offset*3, sendbuf[1]*3 );
+			memcpy( sendbuf + 3, Colorbuf + offset*4, sendbuf[1]*4 );
 
 			offset += sendbuf[1];
-			byrem -= sendbuf[1]*3;
+			byrem -= sendbuf[1]*4;
 
 
 			if( byrem == 0 ) sendbuf[1] |= 0x80;
 			int tsend = 65; //Size of payload (must be 64+1 always)
 			res = hid_send_feature_report( handle, sendbuf, tsend);
-
+			//usleep(100000);
 			if( res != tsend ) TXFaults++;
 		}
+
 
 #ifdef PROFILE
 		printf( "x" ); fflush( stdout );
@@ -178,7 +195,7 @@ int main()
 
 	//Initialize USB HID stuff.
 	hid_init();
-	handle = hid_open(0xabcd, 0xf123, NULL);
+	handle = hid_open(0xabcd, 0xf410, NULL);
 	if( handle == NULL )
 	{
 		fprintf( stderr, "No device\n" );
@@ -214,7 +231,7 @@ int main()
 			CNFGColor( 0x8080FF );
 		else
 			CNFGColor( 0xffffff );
-		sprintf( stt, "TX Hz:    %d\nRX Hz:    %d\nDReads:   %d\nRXSkips:  %d\nTXFaults: %d\nRXFaults: %d\nTXTotal:  %d\nRXTotal:  %d\n5VUSB:    %4.2f\nTemp(C):  %4.1f", TXHz, RXHz, RXdeltaReads, RXSkips, TXFaults, RXFaults, TXTotal, RXTotal, ADCs[36] / 4096.0 * 3.60 *2.0, ADCs[37]/ 10.0 ); 
+		sprintf( stt, "TX Hz:    %d\nRX Hz:    %d\nDReads:   %d\nRXSkips:  %d\nTXFaults: %d\nRXFaults: %d\nTXTotal:  %d\nRXTotal:  %d\n5VUSB:    %4.2f\nTemp(C):  %4.1f\nADC: %4.1f", TXHz, RXHz, RXdeltaReads, RXSkips, TXFaults, RXFaults, TXTotal, RXTotal, voltage / 4096.0 * 3.60 *2.0, temperature/ 10.0, adc / 4096.*3.3 ); 
 		CNFGDrawText( stt, 3 );
 
 		frames++;

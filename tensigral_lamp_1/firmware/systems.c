@@ -224,7 +224,7 @@ void ConfigureGPIO( uint8_t gpio, int parameters )
 	GPIO_InitStructure.GPIO_Mode = (parameters&INOUT_FLAG)?GPIO_Mode_OUT:GPIO_Mode_IN;
 	GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
 	GPIO_InitStructure.GPIO_PuPd = (parameters&PUPD_FLAG)?( (parameters&PUPD_UP)?GPIO_PuPd_UP:GPIO_PuPd_DOWN ):GPIO_PuPd_NOPULL;
-	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_10MHz;
+	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
 	GPIO_Init(GPIOOf(gpio), &GPIO_InitStructure);
 
 #elif defined( STM32F40_41xxx )

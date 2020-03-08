@@ -14,7 +14,7 @@ OBJCOPYFLAGS = -O binary
 
 BIN=$(CP) -O ihex 
 
-DEFS =  -DSTM32F042 -fshort-wchar
+DEFS = -DSTM32F042 -fshort-wchar
 DEFS := $(DEFS) -DDEBUG
 
 MCU = cortex-m0

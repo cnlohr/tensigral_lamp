@@ -72,7 +72,7 @@ void setup_adcs()
 	ADC_Init(ADC1, &ADC_InitStructure);
 
 	ADC_TempSensorCmd( ENABLE );
-	ADC_ChannelConfig(ADC1, 5, ADC_SampleTime_13_5Cycles);
+	ADC_ChannelConfig(ADC1, 2, ADC_SampleTime_13_5Cycles);
 
 	// Calibrate ADC before enabling
 	ADC_GetCalibrationFactor(ADC1);
@@ -106,7 +106,7 @@ int initialize_adc_start()
 	adc_done = 0;
 
 	adcstate = 0;
-	ADC1->CHSELR = 5;
+	ADC1->CHSELR = 2;
 	ADC_StartOfConversion(ADC1);
 
 	adcstate = 1;
@@ -157,7 +157,7 @@ void __attribute__ ((interrupt("IRQ"))) ADC1_IRQHandler(void)
 		}
 
 		adc_done = 1;
-		ADC1->CHSELR = 5;
+		ADC1->CHSELR = 2;
 		ADC_StartOfConversion(ADC1);
 
 		adcstate++;

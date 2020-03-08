@@ -1,7 +1,7 @@
 #ifndef _WS2812_H
 #define _WS2812_H
 
-#define WSLEDS 216
+#define WSLEDS 20
 
 #include <stdint.h>
 

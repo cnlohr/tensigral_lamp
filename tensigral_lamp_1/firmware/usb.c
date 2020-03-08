@@ -77,6 +77,9 @@ void setAddress( int addy )
 
 void init_usb()
 {
+	//If operating on a SSOP20...
+	RCC->APB2ENR |= RCC_APB2ENR_SYSCFGCOMPEN;
+	SYSCFG->CFGR1 |= SYSCFG_CFGR1_PA11_PA12_RMP;
 
 	ConfigureGPIO( 11, PUPD_NONE|INOUT_OUT );
 	ConfigureGPIO( 12, PUPD_NONE|INOUT_OUT );
@@ -108,6 +111,8 @@ void init_usb()
 
 	setInterruptMask();
 
+
+	//Doing this puts the pullup resistor on, telling the host we're here!
 	USBR->BCDR |= USB_BCDR_DPPU;
 
 	//Fill in serial #
@@ -118,6 +123,7 @@ void init_usb()
 		string3.wString[i] = id;
 	}
 
+	//Setup descriptor locations.
 	for( i = 0; i < 8; i++ )
 	{
 	    USBR_BDT[i].rx.addr=GET_PMA(i,1);
@@ -354,6 +360,17 @@ void handleControlOutTransfer( )
 					raddr = list->addr;
 					rlen = list->length;
 					rlen = (hdr->wLength < rlen) ? hdr->wLength : rlen; //make sure our packet fits in the return size.
+#if 0
+					send_text_value( "wValue: ", hdr->wValue );
+					send_text_value( "wIndex: ", hdr->wIndex );
+					send_text_value( "len: ", rlen );
+					send_text_value( "a0 : ", raddr[0] );
+					send_text_value( "a1 : ", raddr[1] );
+					send_text_value( "a2 : ", raddr[2] );
+					send_text_value( "a3 : ", raddr[3] );
+					send_text_value( "a4 : ", raddr[4] );
+					send_text_value( "a5 : ", raddr[5] );
+#endif
 					sendControlData( raddr, rlen );
 					goto ctrl_end;
 				}
@@ -370,7 +387,7 @@ void handleControlOutTransfer( )
 					openTxEndpoint((&USBR->EP0R+(IN_ENDPOINT_ADDRESS&0x7f)*2),IN_ENDPOINT_ADDRESS&0x7f,USB_EP_INTERRUPT);
 					//openRxEndpoint((&USBR->EP0R+(OUT_ENDPOINT_ADDRESS&0x7f)*2),OUT_ENDPOINT_ADDRESS&0x7f,USB_EP_INTERRUPT, ENDPOINT2_SIZE);
 					usbDataOkToSend = 1;
-					send_text( "EP setup\n" );
+					//send_text( "EP setup\n" );
 				}
 				else //SET_REPORT
 				{
@@ -406,6 +423,9 @@ void handleControlOutTransfer( )
 			case 0x21: 
 				//XXX Not sure why this happens.  Seems random.
 				goto ack;
+			case 0x00:
+				//This happens in lsusb - not sure why.
+				goto ack;
 			default:
 				send_text_value( "UNKSE: ", hdr->bmRequest );
 				send_text_value( "HQ: ", hdr->bRequest );
@@ -417,13 +437,13 @@ void handleControlOutTransfer( )
 				break;
 			}
 			break;
-
-			//XXX TODO WRONG WRONG WRONG! WHY?
 		case 20:
 		case 16:
 			//XXX Unknown error.
 			break;
 		default:
+			//!!?!?!!?!!?!?! Having code here fixes things.
+			//{ volatile int i; i = _setupDataLength; }
 			send_text_value( "UKMR: ", hdr->bmRequest );
 			send_text_value( "HQ: ", hdr->bRequest );
 			send_text_value( "wv: ", hdr->wValue );
@@ -512,7 +532,8 @@ void handleControlInTransfer()
 			}
 		}
 	}
-	if(_address>0 && _inEndpointData[0].remaining==0) {
+	if(_address>0 && _inEndpointData[0].remaining==0 )
+	{
 		USBR->DADDR=_address | USB_DADDR_EF;
 		_address=0;
 	}
@@ -526,7 +547,7 @@ void handleEndpointOutTransfer( volatile uint16_t * reg, uint8_t endpointIndex )
 void handleEndpointInTransfer( volatile uint16_t * reg, uint8_t endpointIndex )
 {
 	//TODO: Writeme
-    *reg=*reg & (~USB_EP_CTR_TX) & USB_EPREG_MASK;
+    *reg = *reg & (~USB_EP_CTR_TX) & USB_EPREG_MASK;
 	usbDataOkToSend = 1;
 }
 
@@ -551,8 +572,6 @@ void onCorrectTransfer()
 			else
 				handleControlInTransfer(  );
 		} else {
-		//	send_text_value( "   ", endpointIndex );
-			// normal endpoint events
 			reg=&USBR->EP0R+2*endpointIndex;
 			if((*reg & USB_EP_CTR_RX)!=0)
 				handleEndpointOutTransfer(reg,endpointIndex);
@@ -604,7 +623,6 @@ void __attribute__ ((interrupt("IRQ"))) USB_IRQHandler(void)
 		USBR->CNTR |= USB_CNTR_LPMODE;
 		_savedState = _deviceState;
 		setDeviceState( USB_DS_SUSPENDED );
-
 	}
 }
 
@@ -619,23 +637,4 @@ void UBsetRxCount(volatile struct UsbBufferDescriptionTableEntry * e, int length
 	}
 	e->count = (nb << 10) | 0x8000;
 }
-
-/*  ORIGINAL CODE:
-      if((length)>62) {
-
-        if((length & 0x1f)==0)
-          wNBlocks--;
-
-        e->count=(wNBlocks << 10) | 0x8000;
-      }
-      else {
-
-        wNBlocks=length >> 1;
-
-        if((length & 0x1)!=0)
-          wNBlocks++;
-
-        e->count=wNBlocks << 10;
-      }
-    }*/
 

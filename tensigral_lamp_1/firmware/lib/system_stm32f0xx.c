@@ -187,6 +187,10 @@ void SystemInit (void)
   /* Reset HSI14 bit */
   RCC->CR2 &= (uint32_t)0xFFFFFFFE;
 
+  //When we get here, the default value of:
+  //CLOCK = (PLL = HSI/2) * 2  is applied.
+  //SWS = 0, so HSI oscillator is used, instead of PLL.
+
   /* Disable all interrupts */
   RCC->CIR = 0x00000000;
 
@@ -283,10 +287,19 @@ void SystemCoreClockUpdate (void)
   */
 static void SetSysClock(void)
 {
+//#if 1 this if you want to support an external oscillator.
+//If this fails, you are at 8MHz for your system clock.
+//That's why I'm doing other stuff below.
+#define TRY_HSE 0
+#define USE_HSI48 1
+#define USE_HSI_PLL 0
+
+
+#if TRY_HSE
   __IO uint32_t StartUpCounter = 0, HSEStatus = 0;
-  
+
   /* SYSCLK, HCLK, PCLK configuration ----------------------------------------*/
-  /* Enable HSE */    
+  /* Enable HSE */
   RCC->CR |= ((uint32_t)RCC_CR_HSEON);
  
   /* Wait till HSE is ready and if Time out is reached exit */
@@ -338,9 +351,44 @@ static void SetSysClock(void)
     }
   }
   else
-  { /* If HSE fails to start-up, the application will have wrong clock 
+  {
+    /* If HSE fails to start-up, the application will have wrong clock 
          configuration. User can add here some code to deal with this error */
-  }  
+	void SystemBootFault( uint32_t HSEStatus, uint32_t Timeout );
+    SystemBootFault( HSEStatus, StartUpCounter );
+  }
+#elif USE_HSI48
+  RCC->CR2 |= 0x00010000; //HSI48 on.
+  RCC->CFGR |= 0x00000003;  //Use HSI48, divide by 1 for AHB.
+#elif USE_HSI_PLL
+  //Otherwise configure the PLL to use the HSI
+  RCC->CR |= 0x0000001; //HSI ON
+
+  /* Enable Prefetch Buffer and set Flash Latency */
+  FLASH->ACR = FLASH_ACR_PRFTBE | FLASH_ACR_LATENCY;
+
+  /* HCLK = SYSCLK */
+  RCC->CFGR |= (uint32_t)RCC_CFGR_HPRE_DIV1;
+    
+  /* PCLK = HCLK */
+  RCC->CFGR |= (uint32_t)RCC_CFGR_PPRE_DIV1;
+
+  /* PLL configuration = HSE * 6 = 48 MHz */
+  RCC->CFGR &= (uint32_t)((uint32_t)~(RCC_CFGR_PLLSRC | RCC_CFGR_PLLXTPRE | RCC_CFGR_PLLMULL));
+  RCC->CFGR |= (uint32_t)(RCC_CFGR_PLLSRC_HSI_PREDIV /*this is the key flag*/ | RCC_CFGR_PLLXTPRE_PREDIV1 | RCC_CFGR_PLLMULL6);
+            
+  /* Enable PLL */
+  RCC->CR |= RCC_CR_PLLON;
+
+  /* Select PLL as system clock source */
+  RCC->CFGR &= (uint32_t)((uint32_t)~(RCC_CFGR_SW));
+  RCC->CFGR |= (uint32_t)RCC_CFGR_SW_PLL;    
+
+  /* Wait till PLL is used as system clock source */
+  while ((RCC->CFGR & (uint32_t)RCC_CFGR_SWS) != (uint32_t)RCC_CFGR_SWS_PLL)
+  {
+  }
+#endif
 }
 
 /**
