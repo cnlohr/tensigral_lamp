@@ -91,7 +91,7 @@ void UpdateLEDs( int ledstart, uint8_t * leddata, int lengthleds )
 		lengthleds = WSLEDS - ledstart;
 	}
 
-	int inmark = ledstart * 4 + 12; //Prefix zero data
+	int inmark = ledstart * 4; //Prefix zero data
 	int bytes = lengthleds * 4;
 	int i;
 	for( i = 0; i < bytes; i++ )
@@ -100,7 +100,7 @@ void UpdateLEDs( int ledstart, uint8_t * leddata, int lengthleds )
 		//Word-on-wire order:  (Determined experiomentally)
 		//LSByte first. MSBit first.
 		if( i + inmark >= WSLEDS*4 ) break;
-		rawwsdata[i+inmark] = CodeData[(color>>4)&0xf] | (CodeData[(color)&0xf]<<16);
+		rawwsdata[i+inmark+12] = CodeData[(color>>4)&0xf] | (CodeData[(color)&0xf]<<16);
 	}
 }
 
