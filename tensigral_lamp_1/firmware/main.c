@@ -21,6 +21,7 @@ void SysTick_Handler(void)
 void SystemBootFault( uint32_t HSEStatus, uint32_t Timeout )
 {
 	send_text( "No external oscillator.\n" );
+	while(1);
 //	send_text_value( "HSEStatus:", HSEStatus );
 //	send_text_value( "Timeout:", Timeout );
 //	send_text_value( "RCC->CFGR:", RCC->CFGR );

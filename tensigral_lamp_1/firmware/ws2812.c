@@ -4,7 +4,7 @@
 
 //based off of https://github.com/fduignan/NucleoF042_DMAandSPItoWS2812Bs/blob/master/spi.c
 
-uint32_t rawwsdata[WSLEDS*4+8];
+uint32_t rawwsdata[WSLEDS*4+12]; //12 buffer for resetting LEDs
 
 void InitWSDMA()
 {
@@ -22,7 +22,7 @@ void InitWSDMA()
 
 	ConfigureGPIO( GPIO_FROM_NUMS( 0, 7 ), 0b11 );  //Just for the sake of testing/setting the port up.
 
-	for( i = 0; i < WSLEDS*4+8; i++ )
+	for( i = 0; i < WSLEDS*4+12; i++ )
 	{
 		rawwsdata[i] = 0;
 	}
@@ -91,7 +91,7 @@ void UpdateLEDs( int ledstart, uint8_t * leddata, int lengthleds )
 		lengthleds = WSLEDS - ledstart;
 	}
 
-	int inmark = ledstart * 4;
+	int inmark = ledstart * 4 + 12; //Prefix zero data
 	int bytes = lengthleds * 4;
 	int i;
 	for( i = 0; i < bytes; i++ )
