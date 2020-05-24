@@ -1,0 +1,267 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L pspice:0 #GND?
+U 1 1 5EC9CCCB
+P 3800 3700
+F 0 "#GND?" H 3800 3600 50  0001 C CNN
+F 1 "0" H 3800 3789 50  0000 C CNN
+F 2 "" H 3800 3700 50  0001 C CNN
+F 3 "~" H 3800 3700 50  0001 C CNN
+	1    3800 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:INDUCTOR Lin
+U 1 1 5EC9CFEB
+P 3450 2350
+F 0 "Lin" H 3450 2565 50  0000 C CNN
+F 1 "INDUCTOR" H 3450 2474 50  0000 C CNN
+F 2 "" H 3450 2350 50  0001 C CNN
+F 3 "~" H 3450 2350 50  0001 C CNN
+F 4 "L" H 3450 2350 50  0001 C CNN "Spice_Primitive"
+F 5 "10uH" H 3450 2350 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 3450 2350 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    3450 2350
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:C Cmid
+U 1 1 5EC9E1D7
+P 4150 2350
+F 0 "Cmid" V 3835 2350 50  0000 C CNN
+F 1 "C" V 3926 2350 50  0000 C CNN
+F 2 "" H 4150 2350 50  0001 C CNN
+F 3 "~" H 4150 2350 50  0001 C CNN
+F 4 "C" H 4150 2350 50  0001 C CNN "Spice_Primitive"
+F 5 "1u" H 4150 2350 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 4150 2350 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    4150 2350
+	0    1    1    0   
+$EndComp
+$Comp
+L pspice:VSOURCE V?
+U 1 1 5EC9E6CC
+P 2800 2750
+F 0 "V?" H 3028 2796 50  0000 L CNN
+F 1 "VSOURCE" H 3028 2705 50  0000 L CNN
+F 2 "" H 2800 2750 50  0001 C CNN
+F 3 "~" H 2800 2750 50  0001 C CNN
+F 4 "V" H 2800 2750 50  0001 C CNN "Spice_Primitive"
+F 5 "dc 4.8" H 2800 2750 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 2800 2750 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    2800 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:0 #GND?
+U 1 1 5EC9EDCB
+P 2800 3200
+F 0 "#GND?" H 2800 3100 50  0001 C CNN
+F 1 "0" H 2800 3289 50  0000 C CNN
+F 2 "" H 2800 3200 50  0001 C CNN
+F 3 "~" H 2800 3200 50  0001 C CNN
+	1    2800 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2800 3200 2800 3050
+Wire Wire Line
+	2800 2450 2800 2350
+Wire Wire Line
+	2800 2350 3200 2350
+$Comp
+L Device:Q_NMOS_DGS Q?
+U 1 1 5EC9F9FB
+P 3700 3300
+F 0 "Q?" H 3904 3346 50  0000 L CNN
+F 1 "Q_NMOS_DGS" H 3904 3255 50  0000 L CNN
+F 2 "" H 3900 3400 50  0001 C CNN
+F 3 "~" H 3700 3300 50  0001 C CNN
+F 4 "X" H 3700 3300 50  0001 C CNN "Spice_Primitive"
+F 5 "irf5nj540" H 3700 3300 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 3700 3300 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "irf540.lib" H 3700 3300 50  0001 C CNN "Spice_Lib_File"
+	1    3700 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3800 3500 3800 3700
+Wire Wire Line
+	3800 2600 3800 2350
+Wire Wire Line
+	3800 2350 3700 2350
+Wire Wire Line
+	3900 2350 3800 2350
+Connection ~ 3800 2350
+$Comp
+L pspice:INDUCTOR Lout
+U 1 1 5ECA22CE
+P 4450 2800
+F 0 "Lout" V 4404 2878 50  0000 L CNN
+F 1 "INDUCTOR" V 4495 2878 50  0000 L CNN
+F 2 "" H 4450 2800 50  0001 C CNN
+F 3 "~" H 4450 2800 50  0001 C CNN
+F 4 "L" H 4450 2800 50  0001 C CNN "Spice_Primitive"
+F 5 "10uH" H 4450 2800 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 4450 2800 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    4450 2800
+	0    1    1    0   
+$EndComp
+$Comp
+L pspice:0 #GND?
+U 1 1 5ECA2A97
+P 4450 3200
+F 0 "#GND?" H 4450 3100 50  0001 C CNN
+F 1 "0" H 4450 3289 50  0000 C CNN
+F 2 "" H 4450 3200 50  0001 C CNN
+F 3 "~" H 4450 3200 50  0001 C CNN
+	1    4450 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4450 3200 4450 3050
+Wire Wire Line
+	4450 2550 4450 2350
+Wire Wire Line
+	4450 2350 4400 2350
+$Comp
+L pspice:VSOURCE Vpulse
+U 1 1 5ECA3209
+P 3450 4050
+F 0 "Vpulse" H 3678 4096 50  0000 L CNN
+F 1 "VSOURCE" H 3678 4005 50  0000 L CNN
+F 2 "" H 3450 4050 50  0001 C CNN
+F 3 "~" H 3450 4050 50  0001 C CNN
+F 4 "V" H 3450 4050 50  0001 C CNN "Spice_Primitive"
+F 5 "dc 10 pulse(0 10 0u 100n 100n 2.5u 5u)" H 3450 4050 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 3450 4050 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    3450 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:0 #GND?
+U 1 1 5ECA3644
+P 3450 4450
+F 0 "#GND?" H 3450 4350 50  0001 C CNN
+F 1 "0" H 3450 4539 50  0000 C CNN
+F 2 "" H 3450 4450 50  0001 C CNN
+F 3 "~" H 3450 4450 50  0001 C CNN
+	1    3450 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3450 4450 3450 4350
+Wire Wire Line
+	3450 3750 3450 3300
+Wire Wire Line
+	3450 3300 3500 3300
+$Comp
+L pspice:R R?
+U 1 1 5ECA69A3
+P 5200 2800
+F 0 "R?" H 5268 2846 50  0000 L CNN
+F 1 "R" H 5268 2755 50  0000 L CNN
+F 2 "" H 5200 2800 50  0001 C CNN
+F 3 "~" H 5200 2800 50  0001 C CNN
+F 4 "R" H 5200 2800 50  0001 C CNN "Spice_Primitive"
+F 5 "1k" H 5200 2800 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 5200 2800 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    5200 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:0 #GND?
+U 1 1 5ECA6E2B
+P 5200 3200
+F 0 "#GND?" H 5200 3100 50  0001 C CNN
+F 1 "0" H 5200 3289 50  0000 C CNN
+F 2 "" H 5200 3200 50  0001 C CNN
+F 3 "~" H 5200 3200 50  0001 C CNN
+	1    5200 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5200 3050 5200 3200
+Wire Wire Line
+	5200 2550 5200 2350
+$Comp
+L pspice:C Cout
+U 1 1 5ECA86D5
+P 5550 2800
+F 0 "Cout" H 5728 2846 50  0000 L CNN
+F 1 "C" H 5728 2755 50  0000 L CNN
+F 2 "" H 5550 2800 50  0001 C CNN
+F 3 "~" H 5550 2800 50  0001 C CNN
+F 4 "C" H 5550 2800 50  0001 C CNN "Spice_Primitive"
+F 5 "2.2uF" H 5550 2800 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 5550 2800 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    5550 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L pspice:0 #GND?
+U 1 1 5ECA918F
+P 5550 3200
+F 0 "#GND?" H 5550 3100 50  0001 C CNN
+F 1 "0" H 5550 3289 50  0000 C CNN
+F 2 "" H 5550 3200 50  0001 C CNN
+F 3 "~" H 5550 3200 50  0001 C CNN
+	1    5550 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5550 3200 5550 3050
+Wire Wire Line
+	5550 2550 5550 2350
+$Comp
+L pspice:DIODE Drect
+U 1 1 5ECAA3B0
+P 4800 2350
+F 0 "Drect" H 4800 2615 50  0000 C CNN
+F 1 "DIODE" H 4800 2524 50  0000 C CNN
+F 2 "" H 4800 2350 50  0001 C CNN
+F 3 "~" H 4800 2350 50  0001 C CNN
+F 4 "D" H 4800 2350 50  0001 C CNN "Spice_Primitive"
+F 5 "D1n4007" H 4800 2350 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 4800 2350 50  0001 C CNN "Spice_Netlist_Enabled"
+F 7 "diodes.lib" H 4800 2350 50  0001 C CNN "Spice_Lib_File"
+	1    4800 2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4600 2350 4450 2350
+Connection ~ 4450 2350
+Wire Wire Line
+	5000 2350 5200 2350
+Connection ~ 5200 2350
+Wire Wire Line
+	5200 2350 5550 2350
+$Comp
+L pspice:R Rsource
+U 1 1 5ECA420F
+P 3800 2850
+F 0 "Rsource" H 3868 2896 50  0000 L CNN
+F 1 "R" H 3868 2805 50  0000 L CNN
+F 2 "" H 3800 2850 50  0001 C CNN
+F 3 "~" H 3800 2850 50  0001 C CNN
+F 4 "R" H 3800 2850 50  0001 C CNN "Spice_Primitive"
+F 5 ".1" H 3800 2850 50  0001 C CNN "Spice_Model"
+F 6 "Y" H 3800 2850 50  0001 C CNN "Spice_Netlist_Enabled"
+	1    3800 2850
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC

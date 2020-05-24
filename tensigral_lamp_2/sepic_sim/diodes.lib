@@ -1,0 +1,14 @@
+
+
+.MODEL D1n4007 d
++IS=7.02767e-09 RS=0.0341512 N=1.80803 EG=1.05743
++XTI=5 BV=1000 IBV=5e-08 CJO=1e-11
++VJ=0.7 M=0.5 FC=0.5 TT=1e-07
++KF=0 AF=1
+
+
+
+
+.model Z5p6 D
++Is=1.5n Rs=.5 Cjo=185p nbv=3 bv=6.8 Ibv=1m
+

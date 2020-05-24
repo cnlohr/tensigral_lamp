@@ -1,0 +1,10 @@
+1
+9
+.tran 10n 100u
+2
+1
+Net-(Cmid-Pad2)
+V
+1
+Net-(Cout-Pad1)
+V
