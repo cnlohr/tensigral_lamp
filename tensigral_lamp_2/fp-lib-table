@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name ZTS6011E-MICROPHONE)(type KiCad)(uri ${KIPRJMOD}/ZTS6011E-MICROPHONE.pretty)(options "")(descr ""))
+)

@@ -1019,7 +1019,7 @@ F 3 "" H 3850 6300 50  0001 C CNN
 	1    3850 6300
 	1    0    0    -1  
 $EndComp
-Text GLabel 2400 3850 2    50   Input ~ 0
+Text GLabel 2400 4450 2    50   Input ~ 0
 ANA_ADC
 $Comp
 L tensigral_lamp_hardware-rescue:C-Device-tensigral_lamp_hardware-rescue C9
@@ -1436,7 +1436,7 @@ L tensigral_lamp_hardware-rescue:R-Device-tensigral_lamp_hardware-rescue R3
 U 1 1 5ECD2BFA
 P 650 5200
 F 0 "R3" H 580 5154 50  0000 R CNN
-F 1 "4.7k-1%" H 600 5250 50  0000 R CNN
+F 1 "4.7k" H 600 5250 50  0000 R CNN
 F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 580 5200 50  0001 C CNN
 F 3 "~" H 650 5200 50  0001 C CNN
 F 4 "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_UNI-ROYAL-Uniroyal-Elec-0805W8F4701T5E_C17673.html" H 650 5200 50  0001 C CNN "LCSC"
@@ -1444,20 +1444,16 @@ F 5 "0.002315" H 650 5200 50  0001 C CNN "Cost100"
 	1    650  5200
 	-1   0    0    1   
 $EndComp
-Text GLabel 2400 4350 2    50   Input ~ 0
-VMON1
-Text GLabel 2400 4450 2    50   Input ~ 0
-VMON2
-Text GLabel 2400 4150 2    50   Input ~ 0
-A3
-Text GLabel 4900 4600 0    50   Input ~ 0
-PA4
-Text GLabel 4900 4700 0    50   Input ~ 0
-PA2
-Text GLabel 2400 4250 2    50   Input ~ 0
-A4
 Text GLabel 2400 4050 2    50   Input ~ 0
 A2
+Text GLabel 4900 4600 0    50   Input ~ 0
+PA3
+Text GLabel 4900 4700 0    50   Input ~ 0
+PA1
+Text GLabel 2400 4150 2    50   Input ~ 0
+A3
+Text GLabel 2400 3950 2    50   Input ~ 0
+A1
 Text GLabel 4900 5100 0    50   Input ~ 0
 AUXU
 $Comp
@@ -1487,206 +1483,6 @@ F 4 "1" V 5050 4900 50  0001 C CNN "NOBOM"
 	1    0    0    -1  
 $EndComp
 $Comp
-L tensigral_lamp_hardware-rescue:GND-power-tensigral_lamp_hardware-rescue #PWR0111
-U 1 1 5ED2F74C
-P 6750 4650
-F 0 "#PWR0111" H 6750 4400 50  0001 C CNN
-F 1 "GND" V 6755 4522 50  0000 R CNN
-F 2 "" H 6750 4650 50  0001 C CNN
-F 3 "" H 6750 4650 50  0001 C CNN
-	1    6750 4650
-	0    -1   -1   0   
-$EndComp
-Text GLabel 6250 4950 0    50   Input ~ 0
-PD_VPP
-Text GLabel 6250 4650 0    50   Input ~ 0
-PD_VDD
-Text GLabel 6750 4950 2    50   Input ~ 0
-A4
-Text GLabel 6250 4850 0    50   Input ~ 0
-SWC_TX
-Text GLabel 6250 4750 0    50   Input ~ 0
-A3
-Text Notes 5400 4900 0    50   ~ 0
-IPDA / U2TX
-Text Notes 6900 5000 0    50   ~ 0
-IPCK / U2CK\n
-Text Notes 5750 4800 0    50   ~ 0
-U2RX
-Text GLabel 6750 4850 2    50   Input ~ 0
-PF0
-Text GLabel 6750 4750 2    50   Input ~ 0
-PF1
-Text GLabel 10200 5900 2    50   Input ~ 0
-VMON1
-Text GLabel 10200 4900 2    50   Input ~ 0
-VMON2
-Text GLabel 2400 3950 2    50   Input ~ 0
-TIM2_CH2
-Text GLabel 8500 6000 0    50   Input ~ 0
-TIM2_CH2
-Text GLabel 8500 5000 0    50   Input ~ 0
-TIM3_CH4
-$Comp
-L Connector_Generic:Conn_02x05_Odd_Even J3
-U 1 1 5EE23455
-P 6450 4750
-F 0 "J3" H 6500 5167 50  0000 C CNN
-F 1 "DEVHDR" H 6500 5076 50  0000 C CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_2x05_P2.54mm_Vertical_SMD" H 6450 4750 50  0001 C CNN
-F 3 "~" H 6450 4750 50  0001 C CNN
-	1    6450 4750
-	1    0    0    -1  
-$EndComp
-$Comp
-L tensigral_lamp_hardware-rescue:GND-power-tensigral_lamp_hardware-rescue #PWR0112
-U 1 1 5EE24F30
-P 6750 4550
-F 0 "#PWR0112" H 6750 4300 50  0001 C CNN
-F 1 "GND" V 6755 4422 50  0000 R CNN
-F 2 "" H 6750 4550 50  0001 C CNN
-F 3 "" H 6750 4550 50  0001 C CNN
-	1    6750 4550
-	0    -1   -1   0   
-$EndComp
-Text GLabel 6250 4550 0    50   Input ~ 0
-VUSB
-$Comp
-L tensigral_lamp_hardware-rescue:L-Device-tensigral_lamp_hardware-rescue L4
-U 1 1 5EE2CCC1
-P 8550 5600
-F 0 "L4" V 8740 5600 50  0000 C CNN
-F 1 "10uH" V 8649 5600 50  0000 C CNN
-F 2 "Inductor_SMD:L_2816_7142Metric" H 8550 5600 50  0001 C CNN
-F 3 "~" H 8550 5600 50  0001 C CNN
-F 4 "https://lcsc.com/product-detail/New-Arrivals_YJYCOIN-CD32YP0302-100M_C492261.html" V 8550 5600 50  0001 C CNN "LCSC"
-F 5 "0.028838" V 8550 5600 50  0001 C CNN "Cost100"
-	1    8550 5600
-	0    -1   -1   0   
-$EndComp
-$Comp
-L tensigral_lamp_hardware-rescue:L-Device-tensigral_lamp_hardware-rescue L6
-U 1 1 5EE2F8BD
-P 9300 5850
-F 0 "L6" V 9490 5850 50  0000 C CNN
-F 1 "10uH" V 9399 5850 50  0000 C CNN
-F 2 "Inductor_SMD:L_2816_7142Metric" H 9300 5850 50  0001 C CNN
-F 3 "~" H 9300 5850 50  0001 C CNN
-F 4 "https://lcsc.com/product-detail/New-Arrivals_YJYCOIN-CD32YP0302-100M_C492261.html" V 9300 5850 50  0001 C CNN "LCSC"
-F 5 "0.028838" V 9300 5850 50  0001 C CNN "Cost100"
-	1    9300 5850
-	1    0    0    -1  
-$EndComp
-$Comp
-L tensigral_lamp_hardware-rescue:C-Device-tensigral_lamp_hardware-rescue C24
-U 1 1 5EE36147
-P 9050 5600
-F 0 "C24" V 8800 5550 50  0000 L CNN
-F 1 "2.2uF" V 8900 5400 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 9088 5450 50  0001 C CNN
-F 3 "~" H 9050 5600 50  0001 C CNN
-F 4 "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SANYEAR-C0805X7R225K250NT_C466790.html" H 9050 5600 50  0001 C CNN "LCSC"
-F 5 "0.011787" H 9050 5600 50  0001 C CNN "Cost100"
-	1    9050 5600
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	9300 5700 9300 5600
-Wire Wire Line
-	9300 5600 9200 5600
-$Comp
-L Device:Q_NMOS_GSD Q2
-U 1 1 5EE42B84
-P 8700 6000
-F 0 "Q2" H 8904 6046 50  0000 L CNN
-F 1 "3404" H 8550 5850 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 8900 6100 50  0001 C CNN
-F 3 "~" H 8700 6000 50  0001 C CNN
-F 4 "https://lcsc.com/product-detail/MOSFET_Wuxi-NCE-Power-Semiconductor-NCE3404_C113769.html" H 8700 6000 50  0001 C CNN "LCSC"
-F 5 "0.023864" H 8700 6000 50  0001 C CNN "Cost100"
-	1    8700 6000
-	1    0    0    -1  
-$EndComp
-$Comp
-L tensigral_lamp_hardware-rescue:GND-power-tensigral_lamp_hardware-rescue #PWR0138
-U 1 1 5EE4656C
-P 8800 6200
-F 0 "#PWR0138" H 8800 5950 50  0001 C CNN
-F 1 "GND" V 8805 6072 50  0001 R CNN
-F 2 "" H 8800 6200 50  0001 C CNN
-F 3 "" H 8800 6200 50  0001 C CNN
-	1    8800 6200
-	1    0    0    -1  
-$EndComp
-Text GLabel 8200 5600 0    50   Input ~ 0
-VUSB
-Wire Wire Line
-	8900 5600 8800 5600
-Wire Wire Line
-	8800 5800 8800 5600
-Connection ~ 8800 5600
-Wire Wire Line
-	8800 5600 8700 5600
-$Comp
-L tensigral_lamp_hardware-rescue:GND-power-tensigral_lamp_hardware-rescue #PWR0144
-U 1 1 5EE4F20F
-P 9300 6200
-F 0 "#PWR0144" H 9300 5950 50  0001 C CNN
-F 1 "GND" V 9305 6072 50  0001 R CNN
-F 2 "" H 9300 6200 50  0001 C CNN
-F 3 "" H 9300 6200 50  0001 C CNN
-	1    9300 6200
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9300 6200 9300 6000
-$Comp
-L Device:D D22
-U 1 1 5EE605FF
-P 9550 5600
-F 0 "D22" H 9550 5384 50  0000 C CNN
-F 1 "1N4002" H 9550 5475 50  0000 C CNN
-F 2 "Diode_SMD:D_SOD-123F" H 9550 5600 50  0001 C CNN
-F 3 "~" H 9550 5600 50  0001 C CNN
-F 4 "https://lcsc.com/product-detail/Diodes-General-Purpose_Shandong-Jingdao-Microelectronics-1N4002W_C169542.html" H 9550 5600 50  0001 C CNN "LCSC"
-F 5 "0.004544" H 9550 5600 50  0001 C CNN "Cost100"
-	1    9550 5600
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	9400 5600 9300 5600
-Connection ~ 9300 5600
-$Comp
-L tensigral_lamp_hardware-rescue:GND-power-tensigral_lamp_hardware-rescue #PWR0146
-U 1 1 5EE6A8B4
-P 9800 6200
-F 0 "#PWR0146" H 9800 5950 50  0001 C CNN
-F 1 "GND" V 9805 6072 50  0001 R CNN
-F 2 "" H 9800 6200 50  0001 C CNN
-F 3 "" H 9800 6200 50  0001 C CNN
-	1    9800 6200
-	1    0    0    -1  
-$EndComp
-$Comp
-L tensigral_lamp_hardware-rescue:C-Device-tensigral_lamp_hardware-rescue C26
-U 1 1 5ECA1659
-P 9800 5900
-F 0 "C26" H 9850 6000 50  0000 L CNN
-F 1 "2.2uF" H 9600 5800 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 9838 5750 50  0001 C CNN
-F 3 "~" H 9800 5900 50  0001 C CNN
-F 4 "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SANYEAR-C0805X7R225K250NT_C466790.html" H 9800 5900 50  0001 C CNN "LCSC"
-F 5 "0.011787" H 9800 5900 50  0001 C CNN "Cost100"
-	1    9800 5900
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9800 6200 9800 6050
-Wire Wire Line
-	9800 5600 9800 5750
-Wire Wire Line
-	9700 5600 9800 5600
-$Comp
 L tensigral_lamp_hardware-rescue:C-Device-tensigral_lamp_hardware-rescue C22
 U 1 1 5ECC0492
 P 9000 1450
@@ -1702,297 +1498,78 @@ $EndComp
 Text GLabel 9000 1300 1    50   Input ~ 0
 AUXVCC
 $Comp
-L tensigral_lamp_hardware-rescue:R-Device-tensigral_lamp_hardware-rescue R12
-U 1 1 5ECE7024
-P 10200 5750
-F 0 "R12" H 10130 5704 50  0000 R CNN
-F 1 "680" V 10300 5900 50  0000 R CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 10130 5750 50  0001 C CNN
-F 3 "~" H 10200 5750 50  0001 C CNN
-F 4 "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_UNI-ROYAL-Uniroyal-Elec-0805W8F6800T5E_C17798.html" H 10200 5750 50  0001 C CNN "LCSC"
-F 5 "0.002409" H 10200 5750 50  0001 C CNN "Cost100"
-	1    10200 5750
-	-1   0    0    1   
-$EndComp
-$Comp
-L tensigral_lamp_hardware-rescue:R-Device-tensigral_lamp_hardware-rescue R13
-U 1 1 5ECE8C54
-P 10200 6050
-F 0 "R13" H 10130 6004 50  0000 R CNN
-F 1 "220" V 10300 6200 50  0000 R CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 10130 6050 50  0001 C CNN
-F 3 "~" H 10200 6050 50  0001 C CNN
-F 4 "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_UNI-ROYAL-Uniroyal-Elec-0805W8F2200T5E_C17557.html" H 10200 6050 50  0001 C CNN "LCSC"
-F 5 "0.00229" H 10200 6050 50  0001 C CNN "Cost100"
-	1    10200 6050
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	9800 5600 10200 5600
-Connection ~ 9800 5600
-$Comp
-L tensigral_lamp_hardware-rescue:GND-power-tensigral_lamp_hardware-rescue #PWR0150
-U 1 1 5ECEB4BF
-P 10200 6200
-F 0 "#PWR0150" H 10200 5950 50  0001 C CNN
-F 1 "GND" V 10205 6072 50  0001 R CNN
-F 2 "" H 10200 6200 50  0001 C CNN
-F 3 "" H 10200 6200 50  0001 C CNN
-	1    10200 6200
-	1    0    0    -1  
-$EndComp
-Text GLabel 10700 5600 2    50   Input ~ 0
-PD_VDD
-$Comp
-L tensigral_lamp_hardware-rescue:L-Device-tensigral_lamp_hardware-rescue L3
-U 1 1 5ED2506B
-P 8550 4600
-F 0 "L3" V 8740 4600 50  0000 C CNN
-F 1 "10uH" V 8649 4600 50  0000 C CNN
-F 2 "Inductor_SMD:L_2816_7142Metric" H 8550 4600 50  0001 C CNN
-F 3 "~" H 8550 4600 50  0001 C CNN
-F 4 "https://lcsc.com/product-detail/New-Arrivals_YJYCOIN-CD32YP0302-100M_C492261.html" V 8550 4600 50  0001 C CNN "LCSC"
-F 5 "0.028838" V 8550 4600 50  0001 C CNN "Cost100"
-	1    8550 4600
-	0    -1   -1   0   
-$EndComp
-$Comp
-L tensigral_lamp_hardware-rescue:L-Device-tensigral_lamp_hardware-rescue L5
-U 1 1 5ED25073
-P 9300 4850
-F 0 "L5" V 9490 4850 50  0000 C CNN
-F 1 "10uH" V 9399 4850 50  0000 C CNN
-F 2 "Inductor_SMD:L_2816_7142Metric" H 9300 4850 50  0001 C CNN
-F 3 "~" H 9300 4850 50  0001 C CNN
-F 4 "https://lcsc.com/product-detail/New-Arrivals_YJYCOIN-CD32YP0302-100M_C492261.html" V 9300 4850 50  0001 C CNN "LCSC"
-F 5 "0.028838" V 9300 4850 50  0001 C CNN "Cost100"
-	1    9300 4850
-	1    0    0    -1  
-$EndComp
-$Comp
-L tensigral_lamp_hardware-rescue:C-Device-tensigral_lamp_hardware-rescue C23
-U 1 1 5ED2507B
-P 9050 4600
-F 0 "C23" V 8800 4550 50  0000 L CNN
-F 1 "2.2uF" V 8900 4400 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 9088 4450 50  0001 C CNN
-F 3 "~" H 9050 4600 50  0001 C CNN
-F 4 "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SANYEAR-C0805X7R225K250NT_C466790.html" H 9050 4600 50  0001 C CNN "LCSC"
-F 5 "0.011787" H 9050 4600 50  0001 C CNN "Cost100"
-	1    9050 4600
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	9300 4700 9300 4600
-Wire Wire Line
-	9300 4600 9200 4600
-$Comp
-L Device:Q_NMOS_GSD Q1
-U 1 1 5ED25085
-P 8700 5000
-F 0 "Q1" H 8904 5046 50  0000 L CNN
-F 1 "3404" H 8550 4850 50  0000 L CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 8900 5100 50  0001 C CNN
-F 3 "~" H 8700 5000 50  0001 C CNN
-F 4 "https://lcsc.com/product-detail/MOSFET_Wuxi-NCE-Power-Semiconductor-NCE3404_C113769.html" H 8700 5000 50  0001 C CNN "LCSC"
-F 5 "0.023864" H 8700 5000 50  0001 C CNN "Cost100"
-	1    8700 5000
-	1    0    0    -1  
-$EndComp
-$Comp
-L tensigral_lamp_hardware-rescue:GND-power-tensigral_lamp_hardware-rescue #PWR0152
-U 1 1 5ED2508B
-P 8800 5200
-F 0 "#PWR0152" H 8800 4950 50  0001 C CNN
-F 1 "GND" V 8805 5072 50  0001 R CNN
-F 2 "" H 8800 5200 50  0001 C CNN
-F 3 "" H 8800 5200 50  0001 C CNN
-	1    8800 5200
-	1    0    0    -1  
-$EndComp
-Text GLabel 8200 4600 0    50   Input ~ 0
-VUSB
-Wire Wire Line
-	8900 4600 8800 4600
-Wire Wire Line
-	8800 4800 8800 4600
-Connection ~ 8800 4600
-Wire Wire Line
-	8800 4600 8700 4600
-$Comp
-L tensigral_lamp_hardware-rescue:GND-power-tensigral_lamp_hardware-rescue #PWR0154
-U 1 1 5ED25096
-P 9300 5200
-F 0 "#PWR0154" H 9300 4950 50  0001 C CNN
-F 1 "GND" V 9305 5072 50  0001 R CNN
-F 2 "" H 9300 5200 50  0001 C CNN
-F 3 "" H 9300 5200 50  0001 C CNN
-	1    9300 5200
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9300 5200 9300 5000
-$Comp
-L Device:D D21
-U 1 1 5ED2509F
-P 9550 4600
-F 0 "D21" H 9550 4384 50  0000 C CNN
-F 1 "1N4002" H 9550 4475 50  0000 C CNN
-F 2 "Diode_SMD:D_SOD-123F" H 9550 4600 50  0001 C CNN
-F 3 "~" H 9550 4600 50  0001 C CNN
-F 4 "https://lcsc.com/product-detail/Diodes-General-Purpose_Shandong-Jingdao-Microelectronics-1N4002W_C169542.html" H 9550 4600 50  0001 C CNN "LCSC"
-F 5 "0.004544" H 9550 4600 50  0001 C CNN "Cost100"
-	1    9550 4600
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	9400 4600 9300 4600
-Connection ~ 9300 4600
-$Comp
-L tensigral_lamp_hardware-rescue:GND-power-tensigral_lamp_hardware-rescue #PWR0156
-U 1 1 5ED250A7
-P 9800 5200
-F 0 "#PWR0156" H 9800 4950 50  0001 C CNN
-F 1 "GND" V 9805 5072 50  0001 R CNN
-F 2 "" H 9800 5200 50  0001 C CNN
-F 3 "" H 9800 5200 50  0001 C CNN
-	1    9800 5200
-	1    0    0    -1  
-$EndComp
-$Comp
-L tensigral_lamp_hardware-rescue:C-Device-tensigral_lamp_hardware-rescue C25
-U 1 1 5ED250AF
-P 9800 4900
-F 0 "C25" H 9850 5000 50  0000 L CNN
-F 1 "2.2uF" H 9600 4800 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 9838 4750 50  0001 C CNN
-F 3 "~" H 9800 4900 50  0001 C CNN
-F 4 "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SANYEAR-C0805X7R225K250NT_C466790.html" H 9800 4900 50  0001 C CNN "LCSC"
-F 5 "0.011787" H 9800 4900 50  0001 C CNN "Cost100"
-	1    9800 4900
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	9800 5200 9800 5050
-Wire Wire Line
-	9800 4600 9800 4750
-Wire Wire Line
-	9700 4600 9800 4600
-$Comp
-L tensigral_lamp_hardware-rescue:R-Device-tensigral_lamp_hardware-rescue R10
-U 1 1 5ED250BA
-P 10200 4750
-F 0 "R10" H 10130 4704 50  0000 R CNN
-F 1 "680" V 10300 4900 50  0000 R CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 10130 4750 50  0001 C CNN
-F 3 "~" H 10200 4750 50  0001 C CNN
-F 4 "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_UNI-ROYAL-Uniroyal-Elec-0805W8F6800T5E_C17798.html" H 10200 4750 50  0001 C CNN "LCSC"
-F 5 "0.002409" H 10200 4750 50  0001 C CNN "Cost100"
-	1    10200 4750
-	-1   0    0    1   
-$EndComp
-$Comp
-L tensigral_lamp_hardware-rescue:R-Device-tensigral_lamp_hardware-rescue R11
-U 1 1 5ED250C2
-P 10200 5050
-F 0 "R11" H 10130 5004 50  0000 R CNN
-F 1 "220" V 10300 5200 50  0000 R CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 10130 5050 50  0001 C CNN
-F 3 "~" H 10200 5050 50  0001 C CNN
-F 4 "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_UNI-ROYAL-Uniroyal-Elec-0805W8F2200T5E_C17557.html" H 10200 5050 50  0001 C CNN "LCSC"
-F 5 "0.00229" H 10200 5050 50  0001 C CNN "Cost100"
-	1    10200 5050
-	-1   0    0    1   
-$EndComp
-Wire Wire Line
-	9800 4600 10200 4600
-Connection ~ 9800 4600
-$Comp
-L tensigral_lamp_hardware-rescue:GND-power-tensigral_lamp_hardware-rescue #PWR0161
-U 1 1 5ED250CA
-P 10200 5200
-F 0 "#PWR0161" H 10200 4950 50  0001 C CNN
-F 1 "GND" V 10205 5072 50  0001 R CNN
-F 2 "" H 10200 5200 50  0001 C CNN
-F 3 "" H 10200 5200 50  0001 C CNN
-	1    10200 5200
-	1    0    0    -1  
-$EndComp
-Text GLabel 10700 4600 2    50   Input ~ 0
-PD_VPP
-$Comp
 L Regulator_Linear:XC6206PxxxMR U4
 U 1 1 5ED4F79A
-P 5150 7150
-F 0 "U4" H 5150 7392 50  0000 C CNN
-F 1 "XC6206P360MR" H 5150 7301 50  0000 C CNN
-F 2 "Package_TO_SOT_SMD:SOT-23" H 5150 7375 50  0001 C CIN
-F 3 "https://www.torexsemi.com/file/xc6206/XC6206.pdf" H 5150 7150 50  0001 C CNN
-F 4 "https://lcsc.com/product-detail/Low-Dropout-Regulators-LDO_UMW-Youtai-Semiconductor-Co-Ltd-XC6206P362MR_C351446.html" H 5150 7150 50  0001 C CNN "LCSC"
-F 5 "0.017802" H 5150 7150 50  0001 C CNN "Cost100"
-	1    5150 7150
+P 5100 7350
+F 0 "U4" H 5100 7592 50  0000 C CNN
+F 1 "XC6206P360MR" H 5100 7501 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 5100 7575 50  0001 C CIN
+F 3 "https://www.torexsemi.com/file/xc6206/XC6206.pdf" H 5100 7350 50  0001 C CNN
+F 4 "https://lcsc.com/product-detail/Low-Dropout-Regulators-LDO_UMW-Youtai-Semiconductor-Co-Ltd-XC6206P362MR_C351446.html" H 5100 7350 50  0001 C CNN "LCSC"
+F 5 "0.017802" H 5100 7350 50  0001 C CNN "Cost100"
+	1    5100 7350
 	1    0    0    -1  
 $EndComp
 $Comp
 L tensigral_lamp_hardware-rescue:C-Device-tensigral_lamp_hardware-rescue C19
 U 1 1 5EDAAA37
-P 5650 7300
-F 0 "C19" H 5700 7400 50  0000 L CNN
-F 1 "2.2uF" H 5450 7200 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5688 7150 50  0001 C CNN
-F 3 "~" H 5650 7300 50  0001 C CNN
-F 4 "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SANYEAR-C0805X7R225K250NT_C466790.html" H 5650 7300 50  0001 C CNN "LCSC"
-F 5 "0.011787" H 5650 7300 50  0001 C CNN "Cost100"
-	1    5650 7300
+P 5600 7500
+F 0 "C19" H 5650 7600 50  0000 L CNN
+F 1 "2.2uF" H 5400 7400 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5638 7350 50  0001 C CNN
+F 3 "~" H 5600 7500 50  0001 C CNN
+F 4 "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_SANYEAR-C0805X7R225K250NT_C466790.html" H 5600 7500 50  0001 C CNN "LCSC"
+F 5 "0.011787" H 5600 7500 50  0001 C CNN "Cost100"
+	1    5600 7500
 	1    0    0    -1  
 $EndComp
 $Comp
 L tensigral_lamp_hardware-rescue:+3V8-power-tensigral_lamp_hardware-rescue #PWR0164
 U 1 1 5EDAF364
-P 4850 7150
-F 0 "#PWR0164" H 4850 7000 50  0001 C CNN
-F 1 "+3V8" H 4865 7323 50  0000 C CNN
-F 2 "" H 4850 7150 50  0001 C CNN
-F 3 "" H 4850 7150 50  0001 C CNN
-	1    4850 7150
+P 4800 7350
+F 0 "#PWR0164" H 4800 7200 50  0001 C CNN
+F 1 "+3V8" H 4815 7523 50  0000 C CNN
+F 2 "" H 4800 7350 50  0001 C CNN
+F 3 "" H 4800 7350 50  0001 C CNN
+	1    4800 7350
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	5450 7150 5650 7150
+	5400 7350 5600 7350
 $Comp
 L tensigral_lamp_hardware-rescue:GND-power-tensigral_lamp_hardware-rescue #PWR0166
 U 1 1 5EDB1745
-P 5150 7450
-F 0 "#PWR0166" H 5150 7200 50  0001 C CNN
-F 1 "GND" V 5155 7322 50  0001 R CNN
-F 2 "" H 5150 7450 50  0001 C CNN
-F 3 "" H 5150 7450 50  0001 C CNN
-	1    5150 7450
+P 5100 7650
+F 0 "#PWR0166" H 5100 7400 50  0001 C CNN
+F 1 "GND" V 5105 7522 50  0001 R CNN
+F 2 "" H 5100 7650 50  0001 C CNN
+F 3 "" H 5100 7650 50  0001 C CNN
+	1    5100 7650
 	1    0    0    -1  
 $EndComp
 $Comp
 L tensigral_lamp_hardware-rescue:GND-power-tensigral_lamp_hardware-rescue #PWR0167
 U 1 1 5EDB1D61
-P 5650 7450
-F 0 "#PWR0167" H 5650 7200 50  0001 C CNN
-F 1 "GND" V 5655 7322 50  0001 R CNN
-F 2 "" H 5650 7450 50  0001 C CNN
-F 3 "" H 5650 7450 50  0001 C CNN
-	1    5650 7450
+P 5600 7650
+F 0 "#PWR0167" H 5600 7400 50  0001 C CNN
+F 1 "GND" V 5605 7522 50  0001 R CNN
+F 2 "" H 5600 7650 50  0001 C CNN
+F 3 "" H 5600 7650 50  0001 C CNN
+	1    5600 7650
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:+3.3V #PWR0168
 U 1 1 5EDB2B2D
-P 5650 7150
-F 0 "#PWR0168" H 5650 7000 50  0001 C CNN
-F 1 "+3.3V" H 5665 7323 50  0000 C CNN
-F 2 "" H 5650 7150 50  0001 C CNN
-F 3 "" H 5650 7150 50  0001 C CNN
-	1    5650 7150
+P 5600 7350
+F 0 "#PWR0168" H 5600 7200 50  0001 C CNN
+F 1 "+3.3V" H 5615 7523 50  0000 C CNN
+F 2 "" H 5600 7350 50  0001 C CNN
+F 3 "" H 5600 7350 50  0001 C CNN
+	1    5600 7350
 	1    0    0    -1  
 $EndComp
-Connection ~ 5650 7150
+Connection ~ 5600 7350
 $Comp
 L power:+3.3V #PWR0169
 U 1 1 5EDB9A01
@@ -2116,25 +1693,6 @@ Wire Wire Line
 	4400 6100 4500 6100
 Wire Wire Line
 	4500 6100 4500 6200
-Wire Wire Line
-	5550 6100 5550 6550
-Wire Wire Line
-	5550 6550 4900 6550
-$Comp
-L tensigral_lamp_hardware-rescue:R-Device-tensigral_lamp_hardware-rescue R8
-U 1 1 5EDB7583
-P 4900 6400
-F 0 "R8" H 5050 6300 50  0000 R CNN
-F 1 "220k" H 5100 6200 50  0000 R CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 4830 6400 50  0001 C CNN
-F 3 "~" H 4900 6400 50  0001 C CNN
-F 4 "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_UNI-ROYAL-Uniroyal-Elec-0805W8F2203T5E_C17556.html" H 4900 6400 50  0001 C CNN "LCSC"
-F 5 "0.002964" H 4900 6400 50  0001 C CNN "Cost100"
-	1    4900 6400
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	4900 6250 4900 6200
 Connection ~ 4900 6200
 Wire Wire Line
 	4900 6200 4950 6200
@@ -2242,10 +1800,6 @@ F 3 "" H 9150 650 50  0001 C CNN
 	1    9150 650 
 	0    1    1    0   
 $EndComp
-Text GLabel 5200 5550 2    50   Input ~ 0
-AVCC
-Text GLabel 5150 5800 2    50   Input ~ 0
-AVCC
 Text GLabel 1950 3150 2    50   Input ~ 0
 AVCC
 Wire Wire Line
@@ -2325,8 +1879,6 @@ Wire Wire Line
 Connection ~ 5550 6100
 Text GLabel 4000 5750 1    50   Input ~ 0
 AVCC
-Text Notes 4250 6700 0    50   ~ 0
-TODO: Can R6 be shorted?
 $Comp
 L tensigral_lamp_hardware-rescue:CONN_1-5050RGB-tensigral_lamp_hardware-rescue P9
 U 1 1 5ED10C6B
@@ -2363,90 +1915,6 @@ Wire Wire Line
 Text GLabel 3850 6100 1    50   Input ~ 0
 AVCC
 $Comp
-L Device:D_Zener D23
-U 1 1 5EF63314
-P 10700 4900
-F 0 "D23" V 10654 4979 50  0000 L CNN
-F 1 "12V Zener" V 10745 4979 50  0000 L CNN
-F 2 "Diode_SMD:D_SOD-123" H 10700 4900 50  0001 C CNN
-F 3 "~" H 10700 4900 50  0001 C CNN
-F 4 "https://lcsc.com/product-detail/Zener-Diodes_Shandong-Jingdao-Microelectronics-BZT52C12_C353560.html" V 10700 4900 50  0001 C CNN "LCSC"
-F 5 "0.009079" V 10700 4900 50  0001 C CNN "Cost100"
-	1    10700 4900
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	10700 4600 10700 4750
-Wire Wire Line
-	10700 4600 10200 4600
-Connection ~ 10200 4600
-$Comp
-L tensigral_lamp_hardware-rescue:GND-power-tensigral_lamp_hardware-rescue #PWR0162
-U 1 1 5EF6AEE5
-P 10700 5050
-F 0 "#PWR0162" H 10700 4800 50  0001 C CNN
-F 1 "GND" V 10705 4922 50  0001 R CNN
-F 2 "" H 10700 5050 50  0001 C CNN
-F 3 "" H 10700 5050 50  0001 C CNN
-	1    10700 5050
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:D_Zener D24
-U 1 1 5EF6B9BB
-P 10700 5900
-F 0 "D24" V 10654 5979 50  0000 L CNN
-F 1 "6.8V Zener" V 10745 5979 50  0000 L CNN
-F 2 "Diode_SMD:D_SOD-123" H 10700 5900 50  0001 C CNN
-F 3 "~" H 10700 5900 50  0001 C CNN
-F 4 "https://lcsc.com/product-detail/Zener-Diodes_Shandong-Jingdao-Microelectronics-BZT52C6V8_C353510.html" V 10700 5900 50  0001 C CNN "LCSC"
-F 5 ".008013" V 10700 5900 50  0001 C CNN "Cost100"
-	1    10700 5900
-	0    1    1    0   
-$EndComp
-Wire Wire Line
-	10700 5600 10700 5750
-Wire Wire Line
-	10700 5600 10200 5600
-Connection ~ 10200 5600
-$Comp
-L tensigral_lamp_hardware-rescue:GND-power-tensigral_lamp_hardware-rescue #PWR0163
-U 1 1 5EF73F4D
-P 10700 6050
-F 0 "#PWR0163" H 10700 5800 50  0001 C CNN
-F 1 "GND" V 10705 5922 50  0001 R CNN
-F 2 "" H 10700 6050 50  0001 C CNN
-F 3 "" H 10700 6050 50  0001 C CNN
-	1    10700 6050
-	1    0    0    -1  
-$EndComp
-$Comp
-L Connector_Generic:Conn_01x02 J5
-U 1 1 5EF9459A
-P 8200 4400
-F 0 "J5" V 8164 4212 50  0000 R CNN
-F 1 "VPPS" V 8300 4500 50  0000 R CNN
-F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_Pad1.0x1.5mm" H 8200 4400 50  0001 C CNN
-F 3 "~" H 8200 4400 50  0001 C CNN
-	1    8200 4400
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	8400 4600 8300 4600
-$Comp
-L Connector_Generic:Conn_01x02 J7
-U 1 1 5EFAEA52
-P 8200 5400
-F 0 "J7" V 8164 5212 50  0000 R CNN
-F 1 "VDDS" V 8300 5500 50  0000 R CNN
-F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_Pad1.0x1.5mm" H 8200 5400 50  0001 C CNN
-F 3 "~" H 8200 5400 50  0001 C CNN
-	1    8200 5400
-	0    -1   -1   0   
-$EndComp
-Wire Wire Line
-	8300 5600 8400 5600
-$Comp
 L Connector_Generic:Conn_01x02 J8
 U 1 1 5EFEDAE8
 P 6850 6150
@@ -2461,4 +1929,56 @@ Text GLabel 6650 6150 0    50   Input ~ 0
 WS2812
 Text GLabel 6650 6250 0    50   Input ~ 0
 WS2812STAFF
+Text GLabel 2400 3850 2    50   Input ~ 0
+A0
+$Comp
+L tensigral_lamp_hardware-rescue:R-Device-tensigral_lamp_hardware-rescue R8
+U 1 1 5EDB7583
+P 5150 6600
+F 0 "R8" H 5300 6500 50  0000 R CNN
+F 1 "220k" H 5350 6400 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 5080 6600 50  0001 C CNN
+F 3 "~" H 5150 6600 50  0001 C CNN
+F 4 "https://lcsc.com/product-detail/Chip-Resistor-Surface-Mount_UNI-ROYAL-Uniroyal-Elec-0805W8F2203T5E_C17556.html" H 5150 6600 50  0001 C CNN "LCSC"
+F 5 "0.002964" H 5150 6600 50  0001 C CNN "Cost100"
+	1    5150 6600
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5300 6600 5550 6600
+Wire Wire Line
+	5550 6100 5550 6600
+Wire Wire Line
+	5000 6600 4900 6600
+Wire Wire Line
+	4900 6200 4900 6600
+$Comp
+L tensigral_lamp_hardware-rescue:C-Device-tensigral_lamp_hardware-rescue C20
+U 1 1 5EDC7626
+P 5150 6750
+F 0 "C20" V 5200 6850 50  0000 L CNN
+F 1 "22nF" V 5200 6500 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5188 6600 50  0001 C CNN
+F 3 "~" H 5150 6750 50  0001 C CNN
+F 4 "https://lcsc.com/product-detail/Multilayer-Ceramic-Capacitors-MLCC-SMD-SMT_Walsin-Tech-Corp-0805B223K500_C123617.html" H 5150 6750 50  0001 C CNN "LCSC"
+F 5 "0.003738" H 5150 6750 50  0001 C CNN "Cost100"
+	1    5150 6750
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	5300 6750 5550 6750
+Wire Wire Line
+	5550 6750 5550 6600
+Connection ~ 5550 6600
+Wire Wire Line
+	5000 6750 4900 6750
+Wire Wire Line
+	4900 6750 4900 6600
+Connection ~ 4900 6600
+Text GLabel 5200 5550 2    50   Input ~ 0
+AVCC
+Text GLabel 5150 5800 2    50   Input ~ 0
+AVCC
+Text Notes 7100 5150 0    50   ~ 0
+Differences:\n * Using opamp in microphone circuit\n * Putting touch on staff.\n * 90 degree mounting of inside strings.\n * Connecting LEDs before tear-apart for testing.
 $EndSCHEMATC

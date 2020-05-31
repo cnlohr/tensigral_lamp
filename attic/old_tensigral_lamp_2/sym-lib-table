@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name tensigral_lamp_hardware-rescue)(type Legacy)(uri ${KIPRJMOD}/tensigral_lamp_hardware-rescue.lib)(options "")(descr ""))
+)
